@@ -8,6 +8,6 @@ public class SpringBootAngularApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootAngularApplication.class, args);
-		int i=0;
+		
 	}
 }
