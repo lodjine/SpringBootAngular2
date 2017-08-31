@@ -1,5 +1,7 @@
 package fr.adaming.springbootangular.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Type_Localité")
-public class Type_localite {
+public class Type_localite implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1863864389357244902L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long idType;
@@ -42,6 +49,11 @@ public class Type_localite {
 
 	public Type_localite() {
 		super();
+	}
+
+	@Override
+	public String toString() {
+		return "Type_localite [idType=" + idType + ", type=" + type + "]";
 	}
 	
 	
