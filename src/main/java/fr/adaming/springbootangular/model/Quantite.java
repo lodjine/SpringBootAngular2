@@ -61,7 +61,7 @@ public class Quantite implements Serializable{
 	}
 
 	@ManyToOne
-	@JoinColumn(name="produitId", referencedColumnName="idProduit", insertable = false, updatable = false)
+	@JoinColumn(name="produitId", referencedColumnName="id_produit", insertable = false, updatable = false)
 	public Produit getProduit() {
 		return produit;
 	}
