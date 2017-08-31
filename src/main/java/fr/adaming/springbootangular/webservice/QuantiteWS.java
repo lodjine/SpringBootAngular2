@@ -17,29 +17,29 @@ public class QuantiteWS {
 	@Autowired
 	private IQuantiteDao quantiteDao;
 
-	@RequestMapping(value="", method = RequestMethod.POST)
+	@RequestMapping(value="/quantites", method = RequestMethod.POST)
 	public Quantite saveQuantite(@RequestBody Quantite quantite) {
 		quantiteDao.save(quantite);		
 		return quantite;
 	}
 	
-	@RequestMapping(value="", method = RequestMethod.PUT)
+	@RequestMapping(value="/quantites", method = RequestMethod.PUT)
 	public Quantite updateQuantite(@RequestBody Quantite quantite) {
 		quantiteDao.save(quantite);
 		return quantite;
 	}
 
-	@RequestMapping(value="", method = RequestMethod.GET)
+	@RequestMapping(value="/quantites", method = RequestMethod.GET)
 	public List<Quantite> getQuantites() {
 		return quantiteDao.findAll();
 	}
 	
-	@RequestMapping(value="", method = RequestMethod.GET)
+	@RequestMapping(value="/quantites/{id}", method = RequestMethod.GET)
 	public Quantite getQuantiteById(@PathVariable Long id){
 		return quantiteDao.findOne(id);
 	}
 	
-	@RequestMapping(value="", method = RequestMethod.DELETE)
+	@RequestMapping(value="/quantites/{id}", method = RequestMethod.DELETE)
 	public boolean deleteQuantite(@PathVariable Long id){
 		quantiteDao.delete(id);			
 		return true;

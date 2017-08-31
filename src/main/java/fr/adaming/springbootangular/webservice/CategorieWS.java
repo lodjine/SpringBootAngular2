@@ -18,29 +18,29 @@ public class CategorieWS {
 	@Autowired
 	ICategorieDao categorieDao;
 	
-	@RequestMapping(value="", method = RequestMethod.POST)
+	@RequestMapping(value="/categories", method = RequestMethod.POST)
 	public Categorie saveCategorie(@RequestBody Categorie categorie) {
 		categorieDao.save(categorie);
 		return categorie;
 	}
 	
-	@RequestMapping(value="", method = RequestMethod.PUT)
+	@RequestMapping(value="/categories", method = RequestMethod.PUT)
 	public Categorie updateCategorie(@RequestBody Categorie categorie) {
 		categorieDao.save(categorie);
 		return categorie;
 	}
 
-	@RequestMapping(value="", method = RequestMethod.GET)
+	@RequestMapping(value="/categories", method = RequestMethod.GET)
 	public List<Categorie> getCategories() {
 		return categorieDao.findAll();
 	}
 	
-	@RequestMapping(value="", method = RequestMethod.GET)
+	@RequestMapping(value="/categories/{id}", method = RequestMethod.GET)
 	public Categorie getCategorieById(@PathVariable Long id){
 		return categorieDao.findOne(id);
 	}
 	
-	@RequestMapping(value="", method = RequestMethod.DELETE)
+	@RequestMapping(value="/categories/{id}", method = RequestMethod.DELETE)
 	public boolean deleteCategorie(@PathVariable Long id){
 		categorieDao.delete(id);			
 		return true;
