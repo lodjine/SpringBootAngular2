@@ -20,10 +20,10 @@ public class Type_localite implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long idType;
+	private Long idType;
 	
 	@Column(name = "type")
-	String type;
+	private String type;
 
 	public Long getIdType() {
 		return idType;
