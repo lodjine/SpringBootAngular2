@@ -3,12 +3,14 @@ package fr.adaming.springbootangular.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -25,19 +27,21 @@ public class Produit implements Serializable {
 	private Boolean perissable;
 	private List<Quantite> listQuantites;
 	private List<Fournisseur> listFournisseurs;
+	private Categorie categorie;
 
 	public Produit() {
 	}
 
 	public Produit(Long idProduit, String intitule, Boolean frais, Boolean perissable, List<Quantite> listQuantites,
-			List<Fournisseur> listFournisseurs) {
-
+			List<Fournisseur> listFournisseurs, Categorie categorie) {
+		super();
 		this.idProduit = idProduit;
 		this.intitule = intitule;
 		this.frais = frais;
 		this.perissable = perissable;
 		this.listQuantites = listQuantites;
 		this.listFournisseurs = listFournisseurs;
+		this.categorie = categorie;
 	}
 
 	@Id
@@ -94,6 +98,15 @@ public class Produit implements Serializable {
 
 	public void setListFournisseurs(List<Fournisseur> listFournisseurs) {
 		this.listFournisseurs = listFournisseurs;
+	}
+	
+	@ManyToOne
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
 	}
 
 	@Override
