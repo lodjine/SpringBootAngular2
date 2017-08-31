@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="produit")
+@Table(name = "produit")
 public class Produit implements Serializable {
 	/**
 	 * 
@@ -23,18 +23,15 @@ public class Produit implements Serializable {
 	private String intitule;
 	private Boolean frais;
 	private Boolean perissable;
-	private List<Quantite> listQuantites; 
+	private List<Quantite> listQuantites;
 	private List<Fournisseur> listFournisseurs;
-	
-	
-	
-	public Produit(){}
-	
-	
+
+	public Produit() {
+	}
 
 	public Produit(Long idProduit, String intitule, Boolean frais, Boolean perissable, List<Quantite> listQuantites,
 			List<Fournisseur> listFournisseurs) {
-		
+
 		this.idProduit = idProduit;
 		this.intitule = intitule;
 		this.frais = frais;
@@ -43,11 +40,9 @@ public class Produit implements Serializable {
 		this.listFournisseurs = listFournisseurs;
 	}
 
-
 	@Id
-	@Column(name="id_produit")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-
+	@Column(name = "id_produit")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getIdProduit() {
 		return idProduit;
 	}
@@ -56,7 +51,7 @@ public class Produit implements Serializable {
 		this.idProduit = idProduit;
 	}
 
-	@Column(name="intitule")
+	@Column(name = "intitule")
 	public String getIntitule() {
 		return intitule;
 	}
@@ -65,7 +60,7 @@ public class Produit implements Serializable {
 		this.intitule = intitule;
 	}
 
-	@Column(name="frais")
+	@Column(name = "frais")
 	public Boolean getFrais() {
 		return frais;
 	}
@@ -74,7 +69,7 @@ public class Produit implements Serializable {
 		this.frais = frais;
 	}
 
-	@Column(name="perissable")
+	@Column(name = "perissable")
 	public Boolean getPerissable() {
 		return perissable;
 	}
@@ -82,8 +77,8 @@ public class Produit implements Serializable {
 	public void setPerissable(Boolean perissable) {
 		this.perissable = perissable;
 	}
-	
-	@OneToMany(mappedBy="produit")
+
+	@OneToMany(mappedBy = "produit")
 	public List<Quantite> getListQuantites() {
 		return listQuantites;
 	}
@@ -97,8 +92,6 @@ public class Produit implements Serializable {
 		return listFournisseurs;
 	}
 
-
-
 	public void setListFournisseurs(List<Fournisseur> listFournisseurs) {
 		this.listFournisseurs = listFournisseurs;
 	}
@@ -108,7 +101,5 @@ public class Produit implements Serializable {
 		return "Produit [idProduit=" + idProduit + ", intitule=" + intitule + ", frais=" + frais + ", perissable="
 				+ perissable + "]";
 	}
-	
-	
-	
+
 }
