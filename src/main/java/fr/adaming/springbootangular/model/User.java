@@ -16,7 +16,7 @@ public class User {
 	private String password;
 
 	public User() {
-		super();
+	
 	}
 
 	public User(Long idUser, String login, String password) {
