@@ -13,7 +13,7 @@ import fr.adaming.springbootangular.dao.IFournisseurDao;
 import fr.adaming.springbootangular.model.Fournisseur;
 
 @RestController
-public class FournisseurWebService {
+public class FournisseurWS {
 
 	@Autowired
 	private IFournisseurDao fournisseurDao;
