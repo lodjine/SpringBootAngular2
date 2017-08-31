@@ -23,8 +23,8 @@ public class Produit implements Serializable {
 	private String intitule;
 	private Boolean frais;
 	private Boolean perissable;
-//	private List<Quantite> listQuantites; 
-//	private List<Fournisseur> listFournisseurs;
+	private List<Quantite> listQuantites; 
+	private List<Fournisseur> listFournisseurs;
 	
 	
 	
@@ -32,16 +32,16 @@ public class Produit implements Serializable {
 	
 	
 
-//	public Produit(Long idProduit, String intitule, Boolean frais, Boolean perissable, List<Quantite> listQuantites,
-//			List<Fournisseur> listFournisseurs) {
-//		
-//		this.idProduit = idProduit;
-//		this.intitule = intitule;
-//		this.frais = frais;
-//		this.perissable = perissable;
-//		this.listQuantites = listQuantites;
-//		this.listFournisseurs = listFournisseurs;
-//	}
+	public Produit(Long idProduit, String intitule, Boolean frais, Boolean perissable, List<Quantite> listQuantites,
+			List<Fournisseur> listFournisseurs) {
+		
+		this.idProduit = idProduit;
+		this.intitule = intitule;
+		this.frais = frais;
+		this.perissable = perissable;
+		this.listQuantites = listQuantites;
+		this.listFournisseurs = listFournisseurs;
+	}
 
 
 	@Id
@@ -83,25 +83,25 @@ public class Produit implements Serializable {
 		this.perissable = perissable;
 	}
 	
-//	@OneToMany(mappedBy="produit")
-//	public List<Quantite> getListQuantites() {
-//		return listQuantites;
-//	}
+	@OneToMany(mappedBy="produit")
+	public List<Quantite> getListQuantites() {
+		return listQuantites;
+	}
 
-//	public void setListQuantites(List<Quantite> listQuantites) {
-//		this.listQuantites = listQuantites;
-//	}
+	public void setListQuantites(List<Quantite> listQuantites) {
+		this.listQuantites = listQuantites;
+	}
 
-//	@ManyToMany
-//	public List<Fournisseur> getListFournisseurs() {
-//		return listFournisseurs;
-//	}
+	@ManyToMany
+	public List<Fournisseur> getListFournisseurs() {
+		return listFournisseurs;
+	}
 
 
 
-//	public void setListFournisseurs(List<Fournisseur> listFournisseurs) {
-//		this.listFournisseurs = listFournisseurs;
-//	}
+	public void setListFournisseurs(List<Fournisseur> listFournisseurs) {
+		this.listFournisseurs = listFournisseurs;
+	}
 
 	@Override
 	public String toString() {
