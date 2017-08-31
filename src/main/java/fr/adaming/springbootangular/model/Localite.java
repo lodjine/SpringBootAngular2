@@ -5,6 +5,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -12,7 +13,7 @@ import javax.persistence.Entity;
 
 @Entity
 @Table(name = "Localisation")
-public class Localite {
+public class Localite implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -79,6 +80,13 @@ public class Localite {
 
 	public Localite() {
 		super();
+	}
+
+
+	@Override
+	public String toString() {
+		return "Localite [idLocalite=" + idLocalite + ", nom=" + nom + ", adresse=" + adresse + ", quantites="
+				+ quantites + "]";
 	}
 	
 	
