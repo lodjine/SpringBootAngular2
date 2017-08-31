@@ -22,6 +22,11 @@ public class Fournisseur implements Serializable {
 	private String adresse;
 	private String email;
 	private String telephone;
+	private List<Produit> listProduits;
+
+	public Fournisseur() {
+
+	}
 
 	public Fournisseur(Long idFournisseur, String nomFournisseur, String adresse, String email, String telephone) {
 		this.idFournisseur = idFournisseur;
@@ -80,6 +85,15 @@ public class Fournisseur implements Serializable {
 	@Override
 	public String toString() {
 		return "Fournisseur [idFournisseur=" + idFournisseur + ", nomFournisseur=" + nomFournisseur + "]";
+	}
+
+	@ManyToMany(mappedBy = "listFournisseurs", fetch = FetchType.EAGER)
+	public List<Produit> getListProduits() {
+		return listProduits;
+	}
+
+	public void setListProduits(List<Produit> listProduits) {
+		this.listProduits = listProduits;
 	}
 
 	@Override
