@@ -15,6 +15,11 @@ import javax.persistence.Entity;
 @Table(name = "Localisation")
 public class Localite implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long idLocalite;
