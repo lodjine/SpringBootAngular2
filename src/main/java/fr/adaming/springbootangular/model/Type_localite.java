@@ -28,7 +28,7 @@ public class Type_localite implements Serializable{
 	@Column(name = "type")
 	private String type;
 	
-	@OneToMany
+	@OneToMany(mappedBy="typeLocalite")
 	private List<Localite> listLocalites;
 
 	public Long getIdType() {
