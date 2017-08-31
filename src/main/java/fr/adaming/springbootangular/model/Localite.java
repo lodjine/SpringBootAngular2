@@ -3,6 +3,7 @@ package fr.adaming.springbootangular.model;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import java.io.Serializable;
@@ -22,16 +23,16 @@ public class Localite implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long idLocalite;
+	private Long idLocalite;
 	
 	@Column(name = "nom")
-	String nom;
+	private String nom;
 	
 	@Column(name = "adresse")
-	String adresse;
+	private String adresse;
 	
-	
-	List<Quantite> quantites;
+	@OneToMany(mappedBy="localite")
+	private List<Quantite> listQuantites;
 
 
 	public Long getIdLocalite() {
@@ -65,12 +66,12 @@ public class Localite implements Serializable{
 
 
 	public List<Quantite> getQuantite() {
-		return quantites;
+		return listQuantites;
 	}
 
 
 	public void setQuantite(List<Quantite> quantite) {
-		this.quantites = quantite;
+		this.listQuantites = quantite;
 	}
 
 
@@ -79,7 +80,7 @@ public class Localite implements Serializable{
 		this.idLocalite = idLocalite;
 		this.nom = nom;
 		this.adresse = adresse;
-		this.quantites = quantite;
+		this.listQuantites = quantite;
 	}
 
 
@@ -91,7 +92,7 @@ public class Localite implements Serializable{
 	@Override
 	public String toString() {
 		return "Localite [idLocalite=" + idLocalite + ", nom=" + nom + ", adresse=" + adresse + ", quantites="
-				+ quantites + "]";
+				+ listQuantites + "]";
 	}
 	
 	
