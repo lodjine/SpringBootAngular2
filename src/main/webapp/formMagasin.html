@@ -1,4 +1,4 @@
-<div ng-controller="formMagasinCtrl">
+<div ng-controller="formMagasinCtrl" ng-app="meteoreApp">
 
 	<h2>Formulaire de création d'un batiment</h2>
 
@@ -6,27 +6,22 @@
 		<i> Renseignez ici les informations du nouveau magasin ou entrepôt
 		</i>
 	</p>
-	
 
-
-	<form action="">
-	<div style="border: solid 1px; padding: 20px;">
-		<label> Type de Batiment </label> <br /> 
-		<input name="type" type="radio" value="Magasin" CHECKED>Magasin<br>
-		<input name="type" type="radio" value="Entrepot">Entrepôt<br> <br /> 
-		<label>
-			Nom du magasin/entrepôt 
-		</label> <br />
-		<input ng-model="nom" placeholder="Nom" type="text" /> <br /><br />
-		<label>
-			Adresse du magasin
-		</label><br/>
-		<input ng-model="adresse" placeholder="Adresse postale" type="text"/>
-	</div><br />
-	{{message}}
-		<br/>
-		<button ng-click="validationForm()">Enregistrer</button>
-		<br/><br/>
+	<form>
+		<div style="border: solid 1px; padding: 20px;">
+			<label> Type de Batiment </label> <br /> <input name="type"
+				type="radio" value="Magasin" CHECKED>Magasin<br> <input
+				name="type" type="radio" value="Entrepot">Entrepôt<br>
+			<br /> <label> Nom du magasin/entrepôt </label> <br /> <input
+				ng-model="nom" placeholder="Nom" type="text" /> <br />
+			<br /> <label> Adresse du magasin </label><br /> <input
+				ng-model="adresse" placeholder="Adresse postale" type="text" />
+			{{message}}
+		</div>
+		<br /> <br />
+		<button ng-click="validationForm()" type="submit">Enregistrer</button>
+		<br />
+		<br />
 		<button ng-click="annuler()">Annuler</button>
 	</form>
 
