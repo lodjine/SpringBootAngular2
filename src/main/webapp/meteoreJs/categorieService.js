@@ -10,9 +10,7 @@
     function CategorieService ($resource) {
     	
     	var resourceUrl =  '/categories/:id';
-    	return $resource(resourceUrl, {}, {
-
-    	});
+    	return $resource(resourceUrl, {}, {});
     	
     
         

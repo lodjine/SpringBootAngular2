@@ -48,3 +48,5 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	    			
 	        });
 	        
+	 
+});
