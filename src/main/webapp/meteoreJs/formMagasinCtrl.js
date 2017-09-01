@@ -1,23 +1,22 @@
 /**
  * 
  */
-var app = angular.module("meteorApp")
+var app = angular.module('meteoreApp');
 
 var ctrl = app.controller('formMagasinCtrl', function($scope,$window){
 	
 	$scope.validationForm()=function(){
-		
-		
-		
-		
-		
-		
-		
+		if ($scope.nom.length > 3 && $scope.adresse.length > 10 ){
+			$window.location.href = '/accueil.html';
+		}	
+			$scope.message = "Erreur, adresse et/ou nom incorrect !";
+		else {
+			$window.location.href = '/accueil.html';
+		}
+
 	}
 	
-	
-	$scope.annuler(){
-		
+	$scope.annuler()=function(){
+		$window.location.href='/accueil.html';
 	}
-	
-}
+});

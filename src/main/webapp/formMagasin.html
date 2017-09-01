@@ -6,6 +6,8 @@
 		<i> Renseignez ici les informations du nouveau magasin ou entrepôt
 		</i>
 	</p>
+	
+
 
 	<form action="">
 	<div style="border: solid 1px; padding: 20px;">
@@ -19,8 +21,9 @@
 		<label>
 			Adresse du magasin
 		</label><br/>
-		<input placeholder="Adresse postale" type="text"/>
-	</div>
+		<input ng-model="adresse" placeholder="Adresse postale" type="text"/>
+	</div><br />
+	{{message}}
 		<br/>
 		<button ng-click="validationForm()">Enregistrer</button>
 		<br/><br/>
