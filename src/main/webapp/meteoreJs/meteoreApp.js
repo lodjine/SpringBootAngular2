@@ -32,7 +32,7 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	        })
 	        
 	        .state('formMagasin', {
-	        	url: 'formMagasin',
+	        	url: '/formMagasin',
 	        	templateUrl:'formMagasin.html',
 	        	controller:'formMagasinCtrl'
 	        	
