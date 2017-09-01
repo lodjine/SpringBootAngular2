@@ -1,8 +1,23 @@
 /**
  * 
  */
+var app = angular.module("meteorApp")
 
-
-var appli = angular.module('meteoreApp');
-
-var ctrl = appli.controller('formMagasinCtrl', function)
+var ctrl = app.controller('formMagasinCtrl', function($scope,$window){
+	
+	$scope.validationForm()=function(){
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	$scope.annuler(){
+		
+	}
+	
+}
