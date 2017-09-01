@@ -7,7 +7,7 @@ var app=angular.module('loginApp');
 	   if($scope.login=="admin" && $scope.password=="admin"){
 		   $window.location.href = '/accueil.html';
 	   }else{
-		   $scope.message="login et/ou mot de passe erroné!"
+		   $scope.message="login et/ou mot de passe erroné!";
 	   }
    }
    
