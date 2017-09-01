@@ -1,11 +1,10 @@
-/**
- * 
- */
-var app = angular.module('meteoreApp');
 
-var ctrl = app.controller('formMagasinCtrl', function($scope, $window){
-	$scope.message="";
-	$scope.validationForm = function(){
+var app = angular.module('meteoreApp',[]);
+
+var ctrl = app.controller('formMagasinCtrl', function($scope, $window, LocaliteService){
+	
+	
+	$scope.validationFct = function(){
 		if ($scope.nom == "3" && $scope.adresse == "3" ){
 			$window.location.href = '/accueil.html';
 		}	
@@ -15,7 +14,12 @@ var ctrl = app.controller('formMagasinCtrl', function($scope, $window){
 		}
 	}
 	
-	$scope.annuler = function(){
+	$scope.annulerFct = function(){
 		$window.location.href = '/accueil.html';
 	}
+	
+	function saveLocalite(localite){
+		LocaliteService.saveLocalite(localite);
+	}
+	
 });

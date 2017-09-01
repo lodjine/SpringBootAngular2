@@ -1,3 +1,12 @@
+
+<script src="/bower_components/angular/angular.min.js"></script>
+<script
+	src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/meteoreJs/meteoreApp.js"></script>
+<script src="/meteoreJs/formMagasinCtrl.js"></script>
+
+
+
 <div ng-controller="formMagasinCtrl" ng-app="meteoreApp">
 
 	<h2>Formulaire de création d'un batiment</h2>
@@ -9,20 +18,30 @@
 
 	<form>
 		<div style="border: solid 1px; padding: 20px;">
-			<label> Type de Batiment </label> <br /> <input name="type"
-				type="radio" value="Magasin" CHECKED>Magasin<br> <input
+			<label> Type de Batiment </label> <br /> 
+			<input name="type"
+				type="radio" value="Magasin" CHECKED>Magasin<br> 
+			<input
 				name="type" type="radio" value="Entrepot">Entrepôt<br>
-			<br /> <label> Nom du magasin/entrepôt </label> <br /> <input
-				ng-model="nom" placeholder="Nom" type="text" /> <br />
-			<br /> <label> Adresse du magasin </label><br /> <input
-				ng-model="adresse" placeholder="Adresse postale" type="text" />
-			{{message}}
+				
+			<br /> 
+			<label> Nom du magasin/entrepôt </label> <br /> 
+			<input
+				ng-model="nom" placeholder="Nom" type="text" /> <br /> <br /> 
+			<label>
+				Adresse du magasin </label><br /> 
+			<input ng-model="adresse"
+				placeholder="Adresse postale" type="text" /> 
+				{{message}}
 		</div>
 		<br /> <br />
-		<button ng-click="validationForm()" type="submit">Enregistrer</button>
-		<br />
-		<br />
-		<button ng-click="annuler()">Annuler</button>
+		<button  class="btn btn-primary btn-block" ng-click="validationFct()" type="submit">Enregistrer</button>
+		<br /> <br />
+		<button ng-click="annulerFct()">Annuler</button>
 	</form>
 
 </div>
+
+<script src="/BootstrapCss/vendor/jquery/jquery.min.js"></script>
+<script src="/BootstrapCss/vendor/popper/popper.min.js"></script>
+<script src="/BootstrapCss/vendor/bootstrap/js/bootstrap.min.js"></script>
