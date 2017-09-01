@@ -1,6 +1,6 @@
-var loginApp = angular.module('loginApp', ['ui.router']);
+var meteoreApp = angular.module('meteoreApp', ['ui.router']);
 
-loginApp.config(function($stateProvider, $urlRouterProvider) {
+meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 
     
 
@@ -14,3 +14,4 @@ loginApp.config(function($stateProvider, $urlRouterProvider) {
         });
 
 });
+
