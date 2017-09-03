@@ -1,0 +1,30 @@
+<div ng-controller="listMagasinCtrl">
+	<div class="card mb-3">
+		<div class="card-header">
+			<i class="fa fa-table"></i> Liste des magasins
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" width="100%" id="dataTable"
+					cellspacing="0">
+					<thead>
+						<tr>
+							<th>ID magasins</th>
+							<th>Nom</th>
+							<th>Adresse</th>
+							</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="produit in listProduits">
+						<td>{{localite.idLocalite}}</td>
+						<td>{{localite.nom}}</td>
+						<td>{{localite.adresse}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="card-footer small text-muted"></div>
+	</div>
+
+</div>

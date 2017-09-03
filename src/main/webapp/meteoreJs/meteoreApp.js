@@ -10,10 +10,10 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	    
 	 $stateProvider
 	        
-	        .state('listmagasins', {
-	            url: '/listmagasins',
-	            templateUrl: 'listmagasins.html',
-	            controller: 'listmagasinsCtrl'
+	        .state('listMagasins', {
+	            url: '/listMagasins',
+	            templateUrl: 'listMagasins.html',
+	            controller: 'listMagasinsCtrl'
 	           
 	        })
 	        
