@@ -12,20 +12,22 @@
 		<div style="border: solid 1px; padding: 20px;">
 			<label> Type de Batiment </label> <br />
 			
-			 <input ng-model="magasin.typeLocalite" name="type" type="radio"
+			 <input ng-model="type" name="type" type="radio"
 				value="Magasin" CHECKED> Magasin <br> 
-				<input name="type" type="radio" value="Entrepot"> Entrepôt <br> <br /> 
-				<label> Nom du magasin/entrepôt </label> <br /> 
 				
-				<input ng-model="magasin.nom" placeholder="Nom" type="text" /> <br /> <br /> 
-				<label> Adresse du magasin </label><br /> 
+			 <input name="type" type="radio" value="Entrepot"> Entrepôt <br> <br /> 
+				
+			 <label> Nom du magasin/entrepôt </label> <br /> 
+				
+		     <input ng-model="magasin.nom" placeholder="Nom" type="text" /> <br /> <br /> 
+			 <label> Adresse du magasin </label><br /> 
 				
 				<input ng-model="magasin.adresse" placeholder="Adresse postale" type="text" /> {{message}}
 		</div>
 		<br /> <br /> <input class="btn btn-primary btn-block"
-			ng-click="validationFct(magasin)" type="submit">Enregistrer</input> <br />
+			ng-click="validationFct(magasin)" type="submit"> Enregistrer </input> <br />
 		<br />
-		<button ng-click="annulerFct()">Annuler</button>
+		<button ng-click="annulerFct()"> Annuler </button>
 
 	</div>
 </form>
