@@ -12,10 +12,11 @@
 		</p>
 
 		<div style="border: solid 1px; padding: 20px;">
-			<label> Type de Batiment </label> <br /> <input ng-model="type"
-				name="type" type="radio" value="Magasin" CHECKED> Magasin <br>
+			<label> Type de Batiment </label> <br /> 
+			<input ng-model="magasin.typeLocalite.idType"
+				name="type" type="radio" value="1" CHECKED/> Magasin <br>
 
-			<input name="type" type="radio" value="Entrepot"> Entrepôt <br>
+			<input ng-model="magasin.typeLocalite.idType" name="type" type="radio" value="2"/> Entrepôt <br>
 			<br /> <label> Nom du magasin/entrepôt </label> <br /> <input
 				ng-model="magasin.nom" placeholder="Nom" type="text" /> <br /> <br />
 			<label> Adresse du magasin </label><br /> <input
@@ -23,8 +24,9 @@
 			{{message}}
 		</div>
 		<br /> <br /> <input class="btn btn-primary btn-block"
-			ng-click="validationFct(magasin)" type="submit"> Enregistrer
+			ng-click="validationFct(magasin)" type = "submit"> Enregistrer
 		</input> <br /> <br />
+		
 		<button ng-click="annulerFct()">Annuler</button>
 
 	</div>
