@@ -5,6 +5,7 @@
     Magasin.$inject = ['$resource'];
 
     function ListMagasin ($resource) {
+//    	la meme que le web service en java :
     	var resourceUrl =  '/localites/:id';
     	return $resource(resourceUrl, {}, {});
     }
