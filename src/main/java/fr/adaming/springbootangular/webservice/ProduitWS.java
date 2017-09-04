@@ -40,7 +40,7 @@ public class ProduitWS {
 		return produitDao.findOne(id);
 	}
 	
-	@RequestMapping(value="/produit/{id}", method=RequestMethod.DELETE)
+	@RequestMapping(value="/produits/{id}", method=RequestMethod.DELETE)
 	public boolean delete(@PathVariable Long id){
 		produitDao.delete(id);
 		return true;

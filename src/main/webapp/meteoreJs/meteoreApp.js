@@ -44,6 +44,11 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	    		templateUrl : 'formProduit.html',
 	    		controller : 'formProduitCtrl'
 	    			
+	        }).state('detailProduit', {
+	    		url : '/detailProduit/:id',
+	    		templateUrl : 'formProduit.html',
+	    		controller : 'formProduitCtrl'
+	    			
 	        });
 	        
 	 

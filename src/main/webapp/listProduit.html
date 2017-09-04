@@ -1,5 +1,5 @@
 
-
+<form>
 	<div class="card mb-3">
 		<div class="card-header">
 			<i class="fa fa-table"></i> Liste des Produits
@@ -15,8 +15,8 @@
 							<th>Frais ?</th>
 							<th>Perissable ?</th>
 							<th>Categorie</th>
-							<th></th>
-							<th></th>
+							<th>Modifier</th>
+							<th>Supprimer</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -26,8 +26,8 @@
 							<td>{{produit.frais}}</td>
 							<td>{{produit.perissable}}</td>
 							<td>{{produit.categorie.nomCategorie}}</td>
-							<td></td>
-							<td></td>
+							<td><button type="submit" ui-sref="detailProduit({id:produit.idProduit})" value="Modifier"></td>
+							<td><button type="submit" ng-click="deleteProduit(produit.idProduit)">Supprimer</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -35,3 +35,4 @@
 		</div>
 		<div class="card-footer small text-muted"></div>
 	</div>
+</form>
