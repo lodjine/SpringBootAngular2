@@ -1,0 +1,13 @@
+<head>
+<meta charset="UTF-8" />
+</head>
+
+<form>
+	<div>
+		<label>Choisir un magasin</label><br /> <select
+			ng-model="localite.idLocalite">
+			<option ng-repeat="localite in localites"
+				ng-value="localite.idLocalite">{{localite.nom}}</option>
+		</select>
+	</div>
+</form>
