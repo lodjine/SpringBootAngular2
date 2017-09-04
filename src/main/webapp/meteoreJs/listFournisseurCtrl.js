@@ -1,8 +1,8 @@
-angular.module('meteoreApp').controller('listfournisseurCtrl', listfournisseurCtrl);
+angular.module('meteoreApp').controller('listFournisseurCtrl', listFournisseurCtrl);
 
-listfournisseurCtrl.$inject = ['$scope','FournisseurService'];
+listFournisseurCtrl.$inject = ['$scope','FournisseurService'];
 
-	function listfournisseurCtrl($scope,FournisseurService ){
+	function listFournisseurCtrl($scope,FournisseurService ){
 	
 		$scope.fournisseurs=FournisseurService.query();
 		
