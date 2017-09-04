@@ -2,7 +2,7 @@ angular.module('meteoreApp').controller('formFournisseurCtrl', formFournisseurCt
 
 formMagasinCtrl.$inject = [ '$scope', 'formFournisseurCtrl', '$window' ];
 
-function formMagasinCtrl($scope, formFournisseurCtrl, $window) {
+function formFournisseurCtrl($scope, formFournisseurCtrl, $window) {
 
 	$scope.validationFct = function(fournisseur) {
 		formFournisseurCtrl.save(fournisseur);
