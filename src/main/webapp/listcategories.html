@@ -3,13 +3,24 @@
 
 <div> 
 
-<table>
-  <tr ng-repeat="x in categories">
+<table class="table table-bordered" width="100%" id="dataTable"
+					cellspacing="0">
+					<thead>
+						<tr>
+							<th>ID Categorie</th>
+							<th>Nom Categorie</th>
+							
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr ng-repeat="x in categories">
+
   <td>{{ x.idCategorie }}</td>
     <td>{{ x.nomCategorie }}</td>
- 
+ </tbody>
     
-  </tr>
+
 </table>
 
 </div>
