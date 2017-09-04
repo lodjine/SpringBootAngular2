@@ -1,11 +1,20 @@
-'use strict';
 
-angular.module('meteoreApp').factory('Produit', Produit);
+(function() {
+    'use strict';
+    angular
+        .module('meteoreApp')
+        .factory('listProduitsService', listProduitsService);
 
-Produit.$inject = [ '$resource' ];
+    listProduitsService.$inject = ['$resource'];
 
-function listProduits($resource) {
-	var resourceUrl = '/produits/:id';
-	return $resource(resourceUrl, {}, {});
+    function listProduitsService ($resource) {
+    	
+    	var resourceUrl =  '/produits/:id';
+    	return $resource(resourceUrl, {}, {
 
-}
+    	});
+    	
+    
+        
+    }
+})();

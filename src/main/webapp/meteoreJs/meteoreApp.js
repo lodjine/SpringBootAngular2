@@ -1,7 +1,6 @@
 
 var meteoreApp = angular.module('meteoreApp', ['ui.router','ngResource']);
 
-
 meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 
 	$urlRouterProvider.otherwise('/accueil');
@@ -25,9 +24,8 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	        
 	    .state('listProduits', {
 	        	url: '/listProduits',
-	        	templateUrl:'listProduits.html',
-	        	controller:'listProduitsCtrl'
-	        	
+	        	templateUrl:'listProduit.html',
+	        	controller:'listProduitsCtrl'	        	
 	           
 	        })
 	        
@@ -39,14 +37,15 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	        }).state('listCategories', {
 	        	url: '/listCategories',
 	        	templateUrl:'listcategories.html',
-	        	controller:'listcategoriesCtrl'
-	        	
+	        	controller:'listcategoriesCtrl'	        	
+
 	        }).state('formProduit', {
 	    		url : 'formProduit',
 	    		templateUrl : 'formProduit.html',
-	    		controller : 'formProduit'
-	    			
+	    		controller : 'formProduit'	    			
+
 	        });
 	        
 	 
 });
+
