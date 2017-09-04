@@ -112,7 +112,70 @@ public class Produit implements Serializable {
 	@Override
 	public String toString() {
 		return "Produit [idProduit=" + idProduit + ", intitule=" + intitule + ", frais=" + frais + ", perissable="
-				+ perissable + "]";
+				+ perissable + ", categorie=" + categorie + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((categorie == null) ? 0 : categorie.hashCode());
+		result = prime * result + ((frais == null) ? 0 : frais.hashCode());
+		result = prime * result + ((idProduit == null) ? 0 : idProduit.hashCode());
+		result = prime * result + ((intitule == null) ? 0 : intitule.hashCode());
+		result = prime * result + ((listFournisseurs == null) ? 0 : listFournisseurs.hashCode());
+		result = prime * result + ((listQuantites == null) ? 0 : listQuantites.hashCode());
+		result = prime * result + ((perissable == null) ? 0 : perissable.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Produit other = (Produit) obj;
+		if (categorie == null) {
+			if (other.categorie != null)
+				return false;
+		} else if (!categorie.equals(other.categorie))
+			return false;
+		if (frais == null) {
+			if (other.frais != null)
+				return false;
+		} else if (!frais.equals(other.frais))
+			return false;
+		if (idProduit == null) {
+			if (other.idProduit != null)
+				return false;
+		} else if (!idProduit.equals(other.idProduit))
+			return false;
+		if (intitule == null) {
+			if (other.intitule != null)
+				return false;
+		} else if (!intitule.equals(other.intitule))
+			return false;
+		if (listFournisseurs == null) {
+			if (other.listFournisseurs != null)
+				return false;
+		} else if (!listFournisseurs.equals(other.listFournisseurs))
+			return false;
+		if (listQuantites == null) {
+			if (other.listQuantites != null)
+				return false;
+		} else if (!listQuantites.equals(other.listQuantites))
+			return false;
+		if (perissable == null) {
+			if (other.perissable != null)
+				return false;
+		} else if (!perissable.equals(other.perissable))
+			return false;
+		return true;
+	}
+
+
 
 }

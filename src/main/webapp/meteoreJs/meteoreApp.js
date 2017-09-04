@@ -59,6 +59,11 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	templateUrl : 'formFournisseur.html',
 	controller : 'formFournisseurCtrl'
 		
+}).state('selectMagasins', {
+	url : '/selectMagasins',
+	templateUrl : 'selectMagasins.html',
+	controller : 'listMagasinsCtrl'
+		
 });
 	 
 	 

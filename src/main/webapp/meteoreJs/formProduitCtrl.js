@@ -2,7 +2,7 @@ angular.module('meteoreApp').controller('formProduitCtrl', formProduitCtrl);
 
 formProduitCtrl.$inject = [ '$scope', 'ProduitsService' , '$window','CategorieService', '$state', '$stateParams' ];
 
-function formProduitCtrl($scope, ProduitsService, $window,CategorieService) {
+function formProduitCtrl($scope, ProduitsService, $window,CategorieService,$state, $stateParams) {
 
 		$scope.categories=CategorieService.query();
 	var idProduit=$stateParams.id;
@@ -13,9 +13,9 @@ function formProduitCtrl($scope, ProduitsService, $window,CategorieService) {
 	
 	$scope.validationFct = function(produit) {
 		$scope.message = "$scope.produit.intitule";
+		                                     
 		ProduitsService.save(produit);
 
-		$window.location.href = "/accueil.html";
 	}
 
 };
