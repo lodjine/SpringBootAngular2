@@ -14,3 +14,4 @@ function formProduitCtrl($scope, ProduitFormService, $window) {
 	}
 
 };
+ 
