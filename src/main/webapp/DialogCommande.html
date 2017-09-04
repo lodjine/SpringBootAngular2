@@ -1,0 +1,27 @@
+<head>
+<meta charset="UTF-8">
+</head>
+
+<dialog id="idDialog">
+<form method="dialog">
+<section>
+	<div>
+		<label> Choix de l'entrepôt </label> 
+		
+		
+		<select>
+			<option ng-model="localite" ng-repeat="x in localities" ng-value="x">{{x.nom}}</option>
+		</select> 
+		<br />
+		
+		
+		<label> Quantité du produit</label>
+		<input type="text"
+			name="quantité" placeholder="quantité" ng-model="quantity.quantite" /> <br />
+			
+			
+		<button type="button" class="btn btn-primary btn-block" ng-click="enregistrerNewQuantity(quantity)"> Commander </button>
+	</div>
+	</section>
+</form>
+</dialog>
