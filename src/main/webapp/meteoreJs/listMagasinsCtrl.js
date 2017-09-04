@@ -1,9 +1,9 @@
 
 angular.module('meteoreApp').controller('listMagasinsCtrl', listMagasinsCtrl);
 
-listMagasinsCtrl.$inject = ['$scope', 'MagasinsListService'];
+listMagasinsCtrl.$inject = ['$scope', 'listMagasinsService'];
 
-	function listMagasinsCtrl($scope, MagasinsListService){
-		$scope.listMagasins=Localite.querry();
+	function listMagasinsCtrl($scope, listMagasinsService){
+		$scope.listMagasins=listMagasinsService.query();
 	};
  
