@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+
+		
+
+			<h2>Formulaire d'ajout d'un nouveau fournisseur</h2>
+
+			<p>
+				<i> Renseignez ici les informations du nouveau fournisseur </i>
+			</p>
+
+			<div style="border: solid 1px; padding: 20px;">
+
+ <br /> <label>
+					Nom du produit </label> <br /> <input ng-model="fournisseur.nomFournisseur"
+					placeholder="Nom" type="text" /> <br /> 
+					
+					 <br /> <label>
+					Nom du produit </label> <br /> <input ng-model="fournisseur.adresse"
+					placeholder="adresse" type="text" /> <br /> 
+					
+					 <br /> <label>
+					Nom du produit </label> <br /> <input ng-model="fournisseur.email"
+					placeholder="vvvvv@xxx.yy" type="text" /> <br /> 
+					
+					 <br /> <label>
+					Numero de Telephone </label> <br /> <input ng-model="fournisseur.telephone"
+					placeholder="telephone" type="text" /> <br /> 
+					
+					
+					<br /> <br /> <input class="btn btn-primary btn-block"
+				ng-click="validationFct(fournisseur)" type="submit"></input> <br /> <br />
+			<button ng-click="annulerFct()">Annuler</button>
+					
+
+</div>
+</form>
+</body>
+</html>
