@@ -1,12 +1,19 @@
-(function(){
-	'use strict';
-	angular.module('meteoreApp').factory('MagasinListService', MagasinListService);
+(function() {
+    'use strict';
+    angular
+        .module('meteoreApp')
+        .factory('listMagasinsService', listMagasinsService);
 
-    Magasin.$inject = ['$resource'];
+    listMagasinsService.$inject = ['$resource'];
 
-    function ListMagasin ($resource) {
-//    	la meme que le web service en java :
+    function listMagasinsService ($resource) {
+    	
     	var resourceUrl =  '/localites/:id';
-    	return $resource(resourceUrl, {}, {});
+    	return $resource(resourceUrl, {}, {
+
+    	});
+    	
+    
+        
     }
-};
+})();
