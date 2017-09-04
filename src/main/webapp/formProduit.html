@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+
+<meta charset="utf-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -19,12 +20,12 @@
 		<div style="border: solid 1px; padding: 20px;">
 			<label> Produit frais ? </label> <br /> <input name="frais"
 				type="radio" value="oui" CHECKED>Oui<br> <input
-				name="type" type="radio" value="non">Non<br>
+				name="frais" type="radio" value="non">Non<br>
 			<br /> 
 			
-				<label> Produit périssable ? </label> <br /> <input name="perissable"
+				<label> Produit pÃ©rissable ? </label> <br /> <input name="perissable"
 				type="radio" value="oui" CHECKED>Oui<br> <input
-				name="type" type="radio" value="non">Non<br>
+				name="perissable" type="radio" value="non">Non<br>
 			<br /> 
 			
 			<label> Nom du produit </label> <br /> <input
@@ -33,7 +34,7 @@
 <!-- 			{{message}} -->
 		</div>
 		<br /> <br /> <input class="btn btn-primary btn-block"
-			ng-click="validationFct(magasin)" type="submit"></input> <br />
+			ng-click="validationFct(produit)" type="submit"></input> <br />
 		<br />
 		<button ng-click="annulerFct()">Annuler</button>
 
