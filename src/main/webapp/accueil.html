@@ -8,10 +8,13 @@
     <script src="/meteoreJs/meteoreApp.js"></script>
     <script src="/meteoreJs/categorieService.js"></script>
     <script src="/meteoreJs/formMagasinService.js"></script>
+    <script src="/meteoreJs/listMagasinsService.js"></script>
+    <script src="/meteoreJs/listProduitsService.js"></script>
     <script src="/meteoreJs/listcategoriesCtrl.js"></script>
     <script src="/meteoreJs/formMagasinCtrl.js"></script>
     <script src="/meteoreJs/listMagasinsCtrl.js"></script>
-    <script src="/meteoreJs/listMagasinsService.js"></script>
+    <script src="/meteoreJs/listProduitsCtrl.js"></script>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,14 +65,14 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
           <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link" href="#">
+            <a class="nav-link" ui-sref="accueil">
               <i class="fa fa-fw fa-dashboard"></i>
               <span class="nav-link-text">
                 Dashboard</span>
             </a>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-            <a class="nav-link" href="listProduit.html">
+            <a class="nav-link" ui-sref="listProduits">
               <i class="fa fa-fw fa-area-chart"></i>
               <span class="nav-link-text">
                 Liste Produits</span>
@@ -353,7 +356,7 @@
     <!-- Plugin JavaScript -->
     <script src="/BootstrapCss/vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="/BootstrapCss/vendor/chart.js/Chart.min.js"></script>
-    <script src="/BootstrapCss/vendor/datatables/jquery.dataTables.js"></script>
+<!--     <script src="/BootstrapCss/vendor/datatables/jquery.dataTables.js"></script> -->
     <script src="/BootstrapCss/vendor/datatables/dataTables.bootstrap4.js"></script>
 
     <!-- Custom scripts for this template -->
