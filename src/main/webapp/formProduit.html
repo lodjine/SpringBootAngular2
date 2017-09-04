@@ -22,39 +22,38 @@
 				<label> Produit frais</label>
 				<label>
 				   <input
-					ng-model="produit.frais" type="radio" value="oui" />
+					ng-model="produit.frais" type="radio" value="true" />
 					oui
 				</label>
 				<label>
 				   <input
-					ng-model="produit.frais" type="radio" value="non" />
+					ng-model="produit.frais" type="radio" value="false" />
 					non
 				</label>
 			<br/>
 			
-							<label> Produit périssable</label>
+				<label> Produit périssable</label>
 				<label>
 				   <input
-					ng-model="produit.frais" type="radio" value="oui" />
+					ng-model="produit.perissable" type="radio" value="true" />
 					oui
 				</label>
 				<label>
 				   <input
-					ng-model="produit.frais" type="radio" value="non" />
+					ng-model="produit.perissable" type="radio" value="false" />
 					non
 				</label>
-			<br/>
+		
 			
 			
 			
-					 <label> Produit
-					périssable ? </label> <br /> <input name="perissable" type="radio"
-					value="oui" CHECKED>Oui<br> <input name="perissable"
-					type="radio" value="non">Non<br> <br /> <label>
+				 <br /> <label>
 					Nom du produit </label> <br /> <input ng-model="produit.intitule"
-					placeholder="Nom" type="text" /> <br /> <br /> <label>
-					Catégories </label><br /> <select multiple="multiple">
-					<option ng-repeat="x in categories">{{x.nomCategorie}}</option>
+					placeholder="Nom" type="text" /> <br /> 
+					
+					 <label>
+					Catégorie </label><br /> <select>
+					<option ng-model="produit.categorie" ng-repeat="x in categories" value={{x}}>{{x.nomCategorie}} </option>
 				</select>
 
 
