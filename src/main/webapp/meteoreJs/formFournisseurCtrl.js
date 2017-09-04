@@ -1,11 +1,11 @@
 angular.module('meteoreApp').controller('formFournisseurCtrl', formFournisseurCtrl);
 
-formFournisseurCtrl.$inject = [ '$scope', 'formFournisseurCtrl', '$window' ];
+formFournisseurCtrl.$inject = [ '$scope', 'FournisseurService', '$window' ];
 
-function formFournisseurCtrl($scope, formFournisseurCtrl, $window) {
+function formFournisseurCtrl($scope, FournisseurService, $window) {
 
 	$scope.validationFct = function(fournisseur) {
-		formFournisseurCtrl.save(fournisseur);
+		FournisseurService.save(fournisseur);
 		$window.location.href = '/accueil.html#/listFournisseur';
 	}
 
