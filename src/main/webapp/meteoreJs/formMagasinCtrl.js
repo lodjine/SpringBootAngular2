@@ -1,15 +1,15 @@
 angular.module('meteoreApp').controller('formMagasinCtrl', formMagasinCtrl);
 
-formMagasinCtrl.$inject = [ '$scope', 'MagasinFormService', '$window' ];
+formMagasinCtrl.$inject = [ '$scope', 'MagasinFormService', '$window', '$state' ];
 
-function formMagasinCtrl($scope, MagasinFormService, $window) {
+function formMagasinCtrl($scope, MagasinFormService, $window, $state) {
 
 	$scope.validationFct = function(magasin) {
 		MagasinFormService.save(magasin);
-		$window.location.href = '/accueil.html#/listMagasins';
+		$state.go("listMagasins");
 	}
 
 	$scope.annulerFct = function() {
-		$window.location.href = '/accueil.html#/listMagasins';
+		$state.go("listMagasins");
 	}
 };
