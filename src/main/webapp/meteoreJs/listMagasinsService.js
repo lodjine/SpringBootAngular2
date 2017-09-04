@@ -9,9 +9,7 @@
     function listMagasinsService ($resource) {
     	
     	var resourceUrl =  '/localites/:id';
-    	return $resource(resourceUrl, {}, {
-
-    	});
+    	return $resource(resourceUrl, {}, {});
     	
     
         
