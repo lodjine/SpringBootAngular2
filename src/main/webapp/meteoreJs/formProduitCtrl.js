@@ -1,17 +1,23 @@
 angular.module('meteoreApp').controller('formProduitCtrl', formProduitCtrl);
 
-formProduitCtrl.$inject = [ '$scope', 'ProduitFormService' ];
+formProduitCtrl.$inject = [ '$scope', 'ProduitsService' , '$window','CategorieService' ];
 
-function formProduitCtrl($scope, ProduitFormService, $window) {
+function formProduitCtrl($scope, ProduitsService, $window,CategorieService) {
 
-	var fr = $scope.produit.intitule;
-
+		$scope.categories=CategorieService.query();
+	
+	
+	
 	$scope.validationFct = function(produit) {
 		$scope.message = "$scope.produit.intitule";
-		ProduitFormService.save(produit);
+		ProduitsService.save(produit);
 
 		$window.location.href = "/accueil.html";
 	}
 
 };
- 
+
+
+	
+	
+	
