@@ -1,11 +1,9 @@
 
 angular.module('meteoreApp').controller('listMagasinsCtrl', listMagasinsCtrl);
 
-listMagasinsCtrl.$inject = ['$scope', 'MagasinListService'];
+listMagasinsCtrl.$inject = ['$scope', 'listMagasinsService'];
 
-	function listProduitsCtrl($scope, MagasinListService){
-		$scope.listProduits=Produit.querry();
-	}
-  
-};
+	function listMagasinsCtrl($scope, listMagasinsService){
+		$scope.listMagasins=listMagasinsService.query();
+	};
  

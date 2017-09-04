@@ -12,7 +12,5 @@
     	var resourceUrl =  '/categories/:id';
     	return $resource(resourceUrl, {}, {});
     	
-    
-        
     }
 })();

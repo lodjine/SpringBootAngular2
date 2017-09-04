@@ -1,9 +1,7 @@
 
 
 <form>
-
 	<div>
-
 		<h2>Formulaire de création d'un batiment</h2>
 
 		<p>
@@ -12,20 +10,22 @@
 		</p>
 
 		<div style="border: solid 1px; padding: 20px;">
-			<label> Type de Batiment </label> <br /> <input name="type"
-				type="radio" value="Magasin" CHECKED>Magasin<br> <input
-				name="type" type="radio" value="Entrepot">Entrepôt<br>
-			<br /> <label> Nom du magasin/entrepôt </label> <br /> <input
-				ng-model="magasin.nom" placeholder="Nom" type="text" /> <br /> <br />
-			<label> Adresse du magasin </label><br /> <input
-				ng-model="magasin.adresse" placeholder="Adresse postale" type="text" />
-			{{message}}
+			<label> Type de Batiment </label> <br />
+			
+			 <input ng-model="magasin.typeLocalite" name="type" type="radio"
+				value="Magasin" CHECKED> Magasin <br> 
+				<input name="type" type="radio" value="Entrepot"> Entrepôt <br> <br /> 
+				<label> Nom du magasin/entrepôt </label> <br /> 
+				
+				<input ng-model="magasin.nom" placeholder="Nom" type="text" /> <br /> <br /> 
+				<label> Adresse du magasin </label><br /> 
+				
+				<input ng-model="magasin.adresse" placeholder="Adresse postale" type="text" /> {{message}}
 		</div>
 		<br /> <br /> <input class="btn btn-primary btn-block"
 			ng-click="validationFct(magasin)" type="submit">Enregistrer</input> <br />
 		<br />
 		<button ng-click="annulerFct()">Annuler</button>
-
 
 	</div>
 </form>

@@ -1,4 +1,4 @@
-<div ng-controller="listMagasinCtrl">
+<div >
 	<div class="card mb-3">
 		<div class="card-header">
 			<i class="fa fa-table"></i> Liste des magasins
@@ -15,7 +15,7 @@
 							</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="produit in listProduits">
+						<tr ng-repeat="localite in listMagasins">
 						<td>{{localite.idLocalite}}</td>
 						<td>{{localite.nom}}</td>
 						<td>{{localite.adresse}}</td>

@@ -10,6 +10,8 @@
     <script src="/meteoreJs/formMagasinService.js"></script>
     <script src="/meteoreJs/listcategoriesCtrl.js"></script>
     <script src="/meteoreJs/formMagasinCtrl.js"></script>
+    <script src="/meteoreJs/listMagasinsCtrl.js"></script>
+    <script src="/meteoreJs/listMagasinsService.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -77,9 +79,17 @@
             <a class="nav-link" ui-sref="formMagasin">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">
+                Ajouter Magasins</span>
+            </a>
+          </li>
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" ui-sref="listMagasins">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">
                 Liste Magasins</span>
             </a>
           </li>
+
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
             <a class="nav-link" ui-sref="listCategories">
               <i class="fa fa-fw fa-table"></i>
@@ -87,6 +97,7 @@
                 Liste Categorie</span>
             </a>
           </li>
+          
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-wrench"></i>

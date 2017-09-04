@@ -1,4 +1,5 @@
-<div ng-controller="listProduitsCtrl">
+
+
 	<div class="card mb-3">
 		<div class="card-header">
 			<i class="fa fa-table"></i> Liste des Produits
@@ -10,19 +11,19 @@
 					<thead>
 						<tr>
 							<th>ID Produit</th>
-							<th>Intitulé</th>
+							<th>Intitule</th>
 							<th>Frais ?</th>
 							<th>Perissable ?</th>
 							<th>Categorie</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="produit in listProduits">
-						<td>{{produit.idProduit}}</td>
-						<td>{{produit.intitle}}</td>
-						<td>{{produit.frais}}</td>
-						<td>{{produit.perissable}}</td>
-						<td>{{produit.categorie.nomCategorie}}</td>
+						<tr ng-repeat="produit in produits">
+							<td>{{produit.idProduit}}</td>
+							<td>{{produit.intitule}}</td>
+							<td>{{produit.frais}}</td>
+							<td>{{produit.perissable}}</td>
+							<td>{{produit.categorie.nomCategorie}}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -30,5 +31,3 @@
 		</div>
 		<div class="card-footer small text-muted"></div>
 	</div>
-
-</div>
