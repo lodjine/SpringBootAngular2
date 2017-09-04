@@ -40,10 +40,10 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	        	controller:'listcategoriesCtrl'	        	
 
 	        }).state('formProduit', {
-	    		url : 'formProduit',
+	    		url : '/formProduit',
 	    		templateUrl : 'formProduit.html',
-	    		controller : 'formProduit'	    			
-
+	    		controller : 'formProduitCtrl'
+	    			
 	        });
 	        
 	 
