@@ -15,7 +15,7 @@ function formProduitCtrl($scope, ProduitsService, $window,CategorieService,$stat
 		$scope.message = "$scope.produit.intitule";
 		                                     
 		ProduitsService.save(produit);
-
+		$window.location.href = '/accueil.html#/listProduits';
 	}
 
 };
