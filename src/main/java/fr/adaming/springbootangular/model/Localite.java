@@ -12,6 +12,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 
 @Entity
 @Table(name = "Localisation")
@@ -36,7 +37,7 @@ public class Localite implements Serializable{
 	private List<Quantite> listQuantites;
 
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.EAGER)
 	private Type_localite typeLocalite;
 	
 	
@@ -81,25 +82,11 @@ public class Localite implements Serializable{
 	}
 
 
-	public Localite(Long idLocalite, String nom, String adresse, List<Quantite> quantite) {
-		super();
-		this.idLocalite = idLocalite;
-		this.nom = nom;
-		this.adresse = adresse;
-		this.listQuantites = quantite;
-	}
-
-
+	
 	public Localite() {
 		super();
 	}
 
-
-	@Override
-	public String toString() {
-		return "Localite [idLocalite=" + idLocalite + ", nom=" + nom + ", adresse=" + adresse + ", quantites="
-				+ listQuantites + "]";
-	}
 
 
 	public List<Quantite> getListQuantites() {
@@ -131,6 +118,67 @@ public class Localite implements Serializable{
 		this.listQuantites = listQuantites;
 		this.typeLocalite = typeLocalite;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Localite [idLocalite=" + idLocalite + ", nom=" + nom + ", adresse=" + adresse + ", listQuantites="
+				+ listQuantites + ", typeLocalite=" + typeLocalite + "]";
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((adresse == null) ? 0 : adresse.hashCode());
+		result = prime * result + ((idLocalite == null) ? 0 : idLocalite.hashCode());
+		result = prime * result + ((listQuantites == null) ? 0 : listQuantites.hashCode());
+		result = prime * result + ((nom == null) ? 0 : nom.hashCode());
+		result = prime * result + ((typeLocalite == null) ? 0 : typeLocalite.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Localite other = (Localite) obj;
+		if (adresse == null) {
+			if (other.adresse != null)
+				return false;
+		} else if (!adresse.equals(other.adresse))
+			return false;
+		if (idLocalite == null) {
+			if (other.idLocalite != null)
+				return false;
+		} else if (!idLocalite.equals(other.idLocalite))
+			return false;
+		if (listQuantites == null) {
+			if (other.listQuantites != null)
+				return false;
+		} else if (!listQuantites.equals(other.listQuantites))
+			return false;
+		if (nom == null) {
+			if (other.nom != null)
+				return false;
+		} else if (!nom.equals(other.nom))
+			return false;
+		if (typeLocalite == null) {
+			if (other.typeLocalite != null)
+				return false;
+		} else if (!typeLocalite.equals(other.typeLocalite))
+			return false;
+		return true;
+	}
+
+
+	
 	
 	
 	
