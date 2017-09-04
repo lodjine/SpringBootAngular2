@@ -21,13 +21,17 @@
 				ng-model="magasin.nom" placeholder="Nom" type="text" /> <br /> <br />
 			<label> Adresse du magasin </label><br /> <input
 				ng-model="magasin.adresse" placeholder="Adresse postale" type="text" />
-			{{message}}
+			
 		</div>
-		<br /> <br /> <input class="btn btn-primary btn-block"
-			ng-click="validationFct(magasin)" type = "submit"> Enregistrer
-		</input> <br /> <br />
+		<br /> 
 		
-		<button ng-click="annulerFct()">Annuler</button>
-
+		<div style="width: 100px">
+		<label> Enregistrer </label>
+		<input name="Enregistrer" class="btn btn-primary btn-block"
+			ng-click="validationFct(magasin)" type = "submit"/>
+		
+		<label> Annuler </label>
+		<input name="Annuler" type="submit" class="btn btn-primary btn-block" ng-click="annulerFct()"> 
+</div>
 	</div>
 </form>
