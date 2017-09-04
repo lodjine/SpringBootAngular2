@@ -49,7 +49,14 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	    		templateUrl : 'formProduit.html',
 	    		controller : 'formProduitCtrl'
 	    			
-	        });
+	        });.state('listFournisseur', {
+	url : '/listFournisseur',
+	templateUrl : 'listFournisseur.html',
+	controller : 'listFournisseurCtrl'
+		
+});
+	 
+	 
 	        
 	 
 });
