@@ -1,6 +1,6 @@
 angular.module('meteoreApp').controller('formFournisseurCtrl', formFournisseurCtrl);
 
-formMagasinCtrl.$inject = [ '$scope', 'formFournisseurCtrl', '$window' ];
+formFournisseurCtrl.$inject = [ '$scope', 'formFournisseurCtrl', '$window' ];
 
 function formFournisseurCtrl($scope, formFournisseurCtrl, $window) {
 
