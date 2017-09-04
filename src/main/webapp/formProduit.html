@@ -52,8 +52,8 @@
 					placeholder="Nom" type="text" /> <br /> 
 					
 					 <label>
-					Catégorie </label><br /> <select>
-					<option ng-model="produit.categorie" ng-repeat="x in categories"  ng-value="x" >{{x.nomCategorie}} </option>
+					Catégorie </label><br /> <select ng-model="produit.categorie.idCategorie">
+					<option  ng-repeat="x in categories"  ng-value="x.idCategorie" >{{x.nomCategorie}} </option>
 				</select>
 
 
