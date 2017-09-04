@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+
+<meta charset="utf-8">
 <title>Insert title here</title>
 </head>
 <body>
 
-<form>
+	<form>
 
-	<div>
+		<div>
 
-		<h2>Formulaire d'ajout d'un nouveau produit</h2>
+			<h2>Formulaire d'ajout d'un nouveau produit</h2>
 
-		<p>
-			<i> Renseignez ici les informations du nouveau produit </i>
-		</p>
+			<p>
+				<i> Renseignez ici les informations du nouveau produit </i>
+			</p>
 
-		<div style="border: solid 1px; padding: 20px;">
-			<label> Produit frais ? </label> <br /> <input name="frais"
-				type="radio" value="oui" CHECKED>Oui<br> <input
-				name="type" type="radio" value="non">Non<br>
-			<br /> 
+			<div style="border: solid 1px; padding: 20px;">
+
+				<label> Produit frais</label>
+				<label>
+				   <input
+					ng-model="produit.frais" type="radio" value="oui" />
+					oui
+				</label>
+				<label>
+				   <input
+					ng-model="produit.frais" type="radio" value="non" />
+					non
+				</label>
+			<br/>
 			
-				<label> Produit p�rissable ? </label> <br /> <input name="perissable"
-				type="radio" value="oui" CHECKED>Oui<br> <input
-				name="type" type="radio" value="non">Non<br>
-			<br /> 
+							<label> Produit périssable</label>
+				<label>
+				   <input
+					ng-model="produit.frais" type="radio" value="oui" />
+					oui
+				</label>
+				<label>
+				   <input
+					ng-model="produit.frais" type="radio" value="non" />
+					non
+				</label>
+			<br/>
 			
-			<label> Nom du produit </label> <br /> <input
-				ng-model="produit.intitule" placeholder="Nom" type="text" /> <br /> <br />
 			
-<!-- 			{{message}} -->
+			
+					 <label> Produit
+					périssable ? </label> <br /> <input name="perissable" type="radio"
+					value="oui" CHECKED>Oui<br> <input name="perissable"
+					type="radio" value="non">Non<br> <br /> <label>
+					Nom du produit </label> <br /> <input ng-model="produit.intitule"
+					placeholder="Nom" type="text" /> <br /> <br /> <label>
+					Catégories </label><br /> <select multiple="multiple">
+					<option ng-repeat="x in categories">{{x.nomCategorie}}</option>
+				</select>
+
+
+
+
+				<!-- 			{{message}} -->
+			</div>
+			<br /> <br /> <input class="btn btn-primary btn-block"
+				ng-click="validationFct(produit)" type="submit"></input> <br /> <br />
+			<button ng-click="annulerFct()">Annuler</button>
+
+
 		</div>
-		<br /> <br /> <input class="btn btn-primary btn-block"
-			ng-click="validationFct(magasin)" type="submit"></input> <br />
-		<br />
-		<button ng-click="annulerFct()">Annuler</button>
-
-
-	</div>
-</form>
+	</form>
 </body>
-</html> 
+</html>

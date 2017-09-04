@@ -3,11 +3,11 @@
     'use strict';
     angular
         .module('meteoreApp')
-        .factory('listProduitsService', listProduitsService);
+        .factory('ProduitsService', ProduitsService);
 
-    listProduitsService.$inject = ['$resource'];
+    ProduitsService.$inject = ['$resource'];
 
-    function listProduitsService ($resource) {
+    function ProduitsService ($resource) {
     	
     	var resourceUrl =  '/produits/:id';
     	return $resource(resourceUrl, {}, {
