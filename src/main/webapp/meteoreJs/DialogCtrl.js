@@ -1,6 +1,6 @@
 angular.module('meteoreApp', ['ngMaterial'])
 
-.controller('DialogControler', function($scope, $mdDialog) {
+.controller('DialogCtrl', function($scope, $mdDialog) {
   $scope.status = '  ';
   $scope.customFullscreen = false;
 
@@ -31,8 +31,6 @@ angular.module('meteoreApp', ['ngMaterial'])
     });
   };
   
-  
-
   function DialogController($scope, $mdDialog) {
     $scope.hide = function() {
       $mdDialog.hide();
