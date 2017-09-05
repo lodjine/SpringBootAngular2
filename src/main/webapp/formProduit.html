@@ -19,54 +19,77 @@
 
 			<div style="border: solid 1px; padding: 20px;">
 
-				<label> Produit frais</label>
-				<label>
-				   <input
-					ng-model="produit.frais" type="radio" value="true" name="frais"/>
+				<label> Produit frais</label> <label> <input
+					ng-model="produit.frais" type="radio" value="true" name="frais" />
 					oui
-				</label>
-				<label>
-				   <input
-					ng-model="produit.frais" type="radio" value="false" name="frais"/>
-					non
-				</label>
-			<br/>
-			
-				<label> Produit périssable</label>
-				<label>
-				   <input
-					ng-model="produit.perissable" type="radio" value="true" name="perissable" />
-					oui
-				</label>
-				<label>
-				   <input
-					ng-model="produit.perissable" type="radio" value="false" name="perissable"/>
-					non
-				</label>
-		
-			
-			
-			
-				 <br /> <label>
-					Nom du produit </label> <br /> <input ng-model="produit.intitule"
-					placeholder="Nom" type="text" /> <br /> 
-					
-					 <label>
-					Catégorie </label><br /> <select ng-model="produit.categorie.idCategorie">
-					<option  ng-repeat="x in categories"  ng-value="x.idCategorie" >{{x.nomCategorie}} </option>
+				</label> <label> <input ng-model="produit.frais" type="radio"
+					value="false" name="frais" /> non
+				</label> <br /> <label> Produit périssable</label> <label> <input
+					ng-model="produit.perissable" type="radio" value="true"
+					name="perissable" /> oui
+				</label> <label> <input ng-model="produit.perissable" type="radio"
+					value="false" name="perissable" /> non
+				</label> <br /> <label> Nom du produit </label> <br /> <input
+					ng-model="produit.intitule" placeholder="Nom" type="text" /> <br />
+
+				<label> Catégorie </label><br /> <select
+					ng-model="produit.categorie.idCategorie">
+					<option ng-repeat="x in categories" ng-value="x.idCategorie">{{x.nomCategorie}}
+					</option>
 				</select>
 
+<br/><br/>
+		<button type="button"  class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Ajouter nouvelle catégorie</button>
+		
 
 
-
-				<!-- 			{{message}} -->
+			
 			</div>
 			<br /> <br /> <input class="btn btn-primary btn-block"
 				ng-click="validationFct(produit)" type="submit"></input> <br /> <br />
 			<button ng-click="annulerFct()">Annuler</button>
 
 
+
 		</div>
 	</form>
+	
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Ajout d'une nouvelle catégorie</h4>
+      </div>
+      <div class="modal-body">
+      
+      
+      <form>
+      
+      <label> Nom de la catégorie </label> <br />
+       <input
+					ng-model="categorie.nom" placeholder="Nom" type="text" /> <br /><br /><br />
+       <input class="btn btn-primary btn-block"
+				ng-click="validationCategorie(categorie)" type="submit" data-dismiss="modal"></input>
+      </form>
+      
+      
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
 </body>
 </html>
