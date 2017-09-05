@@ -16,7 +16,6 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	           
 	        })
 	        
-	        
 	        .state('accueil', {
             url: '/accueil',
             templateUrl: 'accueil.html',
