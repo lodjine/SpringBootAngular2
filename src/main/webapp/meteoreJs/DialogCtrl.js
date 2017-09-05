@@ -1,47 +1,42 @@
-angular.module('meteoreApp', ['ngMaterial'])
+angular.module('plunker', ['ui.bootstrap']);
 
-.controller('DialogCtrl', function($scope, $mdDialog) {
-  $scope.status = '  ';
-  $scope.customFullscreen = false;
-
-  $scope.showPrompt = function(ev) {
-    var confirm = $mdDialog.prompt()
-      .title('Nouvelle Commande')
-      .textContent('Sélectionner la quantité à commander')
-      .placeholder('Commande')
-      .ariaLabel('Commande')
-      .targetEvent(ev)
-      .ok('Valider')
-      .cancel('Annuler');
+function ListCtrl($scope, $dialog) {
   
-
-    $mdDialog.show(confirm).then(function(result) {
-      $scope.status = 'Commande validée.';
-    }, function() {
-      $scope.status = 'Commande annulée.';
-    });
+  $scope.items = [
+    {name: 'foo', value: 'foo value'},
+    {name: 'bar', value: 'bar value'},
+    {name: 'baz', value: 'baz value'}
+  ];
+  
+  var dialogOptions = {
+    controller: 'EditCtrl',
+    templateUrl: 'itemEdit.html'
   };
 
-  $scope.showPrerenderedDialog = function(ev) {
-    $mdDialog.show({
-      contentElement: '#myDialog',
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose: true
+  $scope.edit = function(item){
+    
+    var itemToEdit = item;
+    
+    $dialog.dialog(angular.extend(dialogOptions, {resolve: {item: angular.copy(itemToEdit)}}))
+      .open()
+      .then(function(result) {
+        if(result) {
+          angular.copy(result, itemToEdit);                
+        }
+        itemToEdit = undefined;
     });
   };
+}
+// the dialog is injected in the specified controller
+function EditCtrl($scope, item, dialog){
   
-  function DialogController($scope, $mdDialog) {
-    $scope.hide = function() {
-      $mdDialog.hide();
-    };
-
-    $scope.cancel = function() {
-      $mdDialog.cancel();
-    };
-
-    $scope.answer = function(answer) {
-      $mdDialog.hide(answer);
-    };
-  }
-});
+  $scope.item = item;
+  
+  $scope.save = function() {
+    dialog.close($scope.item);
+  };
+  
+  $scope.close = function(){
+    dialog.close(undefined);
+  };
+}
