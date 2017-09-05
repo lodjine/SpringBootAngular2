@@ -14,6 +14,7 @@ function formFournisseurCtrl($scope, FournisseurService, $window, $state, $state
 	$scope.validationFct = function(fournisseur) {
 		FournisseurService.save(fournisseur);
 		$window.location.href = '/accueil.html#/listFournisseur';
+		$window.location.reload();
 	}
 
 	$scope.annulerFct = function() {
