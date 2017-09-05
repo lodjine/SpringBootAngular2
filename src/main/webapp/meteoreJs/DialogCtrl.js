@@ -1,30 +1,16 @@
 angular.module('meteoreApp').controller('DialogCtrl', DialogCtrl);
 
-DialogCtrl.$inject = [ '$scope', 'FournisseurService', '$window' , '$state', '$stateParams','$dialog'];
+DialogCtrl.$inject = [ '$scope', 'FournisseurService', '$window', '$state',
+		'$stateParams', '$dialog' ];
 
-function DialogCtrl($scope, FournisseurService, $window, $state, $stateParams,$dialog) {
+function DialogCtrl($scope, FournisseurService, $window, $state, $stateParams,
+		$dialog, QuantiteService) {
 
-	$scope.produit.nom = "bob";
-
-	$scope.quantite.valeur = 2;
-
-	$scope.quantities = [ {
-		name : 'Produit',
-		value : 'nom'
-	}, {
-		name : 'Quantité',
-		value : 'valeur'
-	}, {
-		name : 'baz',
-		value : 'baz value'
-	} ];
-
-	var dialogOptions = {
-		controller : 'EditCtrl',
-		templateUrl : 'DialobBox.html'
-	};
+	$scope.quantities = QuantiteService.query();
 
 	$scope.edit = function(quantite) {
+
+		$dialog.open();
 
 		var quantiteToEdit = quantite;
 
@@ -39,15 +25,14 @@ function DialogCtrl($scope, FournisseurService, $window, $state, $stateParams,$d
 			quantiteToEdit = undefined;
 		});
 	};
-	
-	
+
 	$scope.item = item;
-	  
-	  $scope.save = function() {
-	    dialog.close($scope.item);
-	  };
-	  
-	  $scope.close = function(){
-	    dialog.close(undefined);
-	  };
+
+	$scope.save = function() {
+		dialog.close($scope.item);
+	};
+
+	$scope.close = function() {
+		dialog.close(undefined);
+	};
 };
