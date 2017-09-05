@@ -7,22 +7,20 @@ angular.module('meteoreApp', ['ngMaterial'])
   $scope.showPrompt = function(ev) {
     var confirm = $mdDialog.prompt()
       .title('Nouvelle Commande')
-      .textContent('Bowser is a common name.')
-      .placeholder('Dog name')
-      .ariaLabel('Dog name')
-      .initialValue('Buddy')
+      .textContent('Sélectionner la quantité à commander')
+      .placeholder('Commande')
+      .ariaLabel('Commande')
       .targetEvent(ev)
       .ok('Valider')
       .cancel('Annuler');
-    
+  
 
     $mdDialog.show(confirm).then(function(result) {
-      $scope.status = 'You decided to name your dog ' + result + '.';
+      $scope.status = 'Commande validée.';
     }, function() {
-      $scope.status = 'You didn\'t name your dog.';
+      $scope.status = 'Commande annulée.';
     });
   };
-
 
   $scope.showPrerenderedDialog = function(ev) {
     $mdDialog.show({
@@ -32,6 +30,8 @@ angular.module('meteoreApp', ['ngMaterial'])
       clickOutsideToClose: true
     });
   };
+  
+  
 
   function DialogController($scope, $mdDialog) {
     $scope.hide = function() {

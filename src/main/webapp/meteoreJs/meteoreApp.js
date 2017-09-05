@@ -66,7 +66,7 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 }).state('DialogCommande', {
 	url : '/DialogCommande',
 	templateUrl : 'DialogCommande.html',
-	controller : 'DialogCtrl';
+	controller : 'DialogCtrl'
 	 
 	 
 	        
