@@ -8,7 +8,7 @@ function DialogCtrl($scope, FournisseurService, $window, $state, $stateParams,
 
 	$scope.quantities = QuantiteService.query();
 
-	$scope.edit = function(quantite) {
+	$scope.edit(quantite) = function(quantite) {
 		$dialog.open();
 	}
 

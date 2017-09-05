@@ -5,35 +5,39 @@
 </head>
 <div>
 	<button class="btn btn-primary btn-block" data-toggle="modal"
-		data-target="#myModal" ng-click="edit()">Nouvel quantité</button>
+		data-target="#myModal" ng-click="creer()">Nouvel quantité</button>
 </div>
 
 
-
 <div>
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>Produit</th>
-				<th>Quantité</th>
-				<th>Action</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="quantite in quantities">
-				<td>{{quantite.produit.intitule}}</td>
-				<td>{{quantite.quantite}}</td>
-				<td><button class="btn btn-small"
-						ng-click="edit({id:quantite.idQuantite})">Edit</button></td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="card mb-3">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Produit</th>
+					<th>Quantité</th>
+					<th>Date</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="quantite in quantities">
+					<td></td>
+					<td>{{quantite.quantite}}</td>
+					<td>{{quantite.dateModification}}</td>
+					<td>
+						<button class="btn btn-small" type="submit"
+							ui-sref="edit({id:quantite.idQuantite})">Edit</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 <div id="myModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 
-		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header">
 				<h4 class="modal-title">Ajout d'une nouvelle quantité</h4>
