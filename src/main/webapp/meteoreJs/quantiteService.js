@@ -1,4 +1,5 @@
 (function() {
+
     'use strict';
     angular
         .module('meteoreApp')
@@ -22,4 +23,5 @@
     
         
     }
+
 })();

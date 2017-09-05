@@ -1,27 +1,30 @@
 
 
+<div>
+	<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">
+		Nouvel quantité</button>
+</div>
 
 
 
-
-<body>	<div>
-		<table class="table table-bordered">
-			<thead>
-				<tr>
-					<th>Produit</th>
-					<th>Quantité</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="quantite in quantities">
-					<td>{{produit.nom}}</td>
-					<td>{{quantite.valeur}}</td>
-					<td><button class="btn btn-small" ng-click="edit(quantite)">Edit</button></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+<div>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Produit</th>
+				<th>Quantité</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="quantite in quantities">
+				<td>{{quantite.nom}}</td>
+				<td>{{quantite.quantite}}</td>
+				<td><button class="btn btn-small" ng-click="edit(quantite)">Edit</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 
 
