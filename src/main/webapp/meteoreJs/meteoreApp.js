@@ -1,5 +1,5 @@
 
-var meteoreApp = angular.module('meteoreApp', ['ui.router','ngResource']);
+var meteoreApp = angular.module('meteoreApp', ['ui.router','ngResource','ui.bootstrap']);
 
 meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 

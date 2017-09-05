@@ -1,17 +1,13 @@
-angular.module('meteoreApp', [ 'ui.bootstrap' ]).controller('DialogCtrl',DialogCtrl);
+angular.module('meteoreApp').controller('DialogCtrl', DialogCtrl);
 
+DialogCtrl.$inject = [ '$scope', 'FournisseurService', '$window' , '$state', '$stateParams','$dialog'];
 
+function DialogCtrl($scope, FournisseurService, $window, $state, $stateParams,$dialog) {
 
-
-
-function ListCtrl($scope, $dialog) {
-	
-	
 	$scope.produit.nom = "bob";
-	
+
 	$scope.quantite.valeur = 2;
-	
-	
+
 	$scope.quantities = [ {
 		name : 'Produit',
 		value : 'nom'
@@ -43,17 +39,15 @@ function ListCtrl($scope, $dialog) {
 			quantiteToEdit = undefined;
 		});
 	};
-}
-// the dialog is injected in the specified controller
-function EditCtrl($scope, quantite, dialog) {
-
-	$scope.quantite = quantite;
-
-	$scope.save = function() {
-		dialog.close($scope.quantite);
-	};
-
-	$scope.close = function() {
-		dialog.close(undefined);
-	};
-}
+	
+	
+	$scope.item = item;
+	  
+	  $scope.save = function() {
+	    dialog.close($scope.item);
+	  };
+	  
+	  $scope.close = function(){
+	    dialog.close(undefined);
+	  };
+};
