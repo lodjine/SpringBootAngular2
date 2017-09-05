@@ -5,42 +5,51 @@
 
 <title>Insert title here</title>
 </head>
-<body>
-<form>
-	<div>
 
-		<table class="table table-bordered" width="100%" id="dataTable"
-			cellspacing="0">
-			<thead>
-				<tr>
-					<th>ID Fournisseur</th>
-					<th>Nom</th>
-					<th>Adresse</th>
-					<th>Telephone</th>
-					<th>Email</th>
-					<th>Modifier</th>
-					<th>Supprimer</th>
-				</tr>
-			</thead>
+	<div class="card mb-3">
+		<div class="card-header">
+			<i class="fa fa-table"></i> Liste des fournisseurs
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				<div>
 
-			<tbody>
-				<tr ng-repeat="x in fournisseurs">
+					<table class="table table-bordered" width="100%" id="dataTable"
+						cellspacing="0">
+						<thead>
+							<tr>
+								<th>ID Fournisseur</th>
+								<th>Nom</th>
+								<th>Adresse</th>
+								<th>Telephone</th>
+								<th>Email</th>
+								<th>Modifier</th>
+								<th>Supprimer</th>
+							</tr>
+						</thead>
 
-					<td>{{ x.idFournisseur}}</td>
-					<td>{{ x.nomFournisseur }}</td>
-					<td>{{ x.adresse}}</td>
-					<td>{{ x.telephone}}</td>
-					<td>{{ x.email}}</td>
-					<td><button class="btn btn-primary btn-block" type="submit"
-							ui-sref="formFournisseur({id:x.idFournisseur})">Modifier</button></td>
-					<td><button class="btn btn-primary btn-block" type="submit"
-							ng-click="deleteFournisseur(x.idFournisseur)">Supprimer</button></td>
-			</tbody>
+						<tbody>
+							<tr ng-repeat="x in fournisseurs">
+
+								<td>{{ x.idFournisseur}}</td>
+								<td>{{ x.nomFournisseur }}</td>
+								<td>{{ x.adresse}}</td>
+								<td>{{ x.telephone}}</td>
+								<td>{{ x.email}}</td>
+								<td><button class="btn btn-primary btn-block" type="submit"
+										ui-sref="formFournisseur({id:x.idFournisseur})">Modifier</button></td>
+								<td><button class="btn btn-primary btn-block" type="submit"
+										ng-click="deleteFournisseur(x.idFournisseur)">Supprimer</button></td>
+							</tr>
+						</tbody>
 
 
-		</table>
+					</table>
 
+				</div>
+			</div>
+		</div>
 	</div>
-</form>
+
 </body>
 </html>
