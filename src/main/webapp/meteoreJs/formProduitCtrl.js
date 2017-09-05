@@ -12,17 +12,22 @@ function formProduitCtrl($scope, ProduitsService, $window,CategorieService,$stat
 	
 	
 	$scope.validationFct = function(produit) {
-		$scope.message = "$scope.produit.intitule";
 		                                     
 		ProduitsService.save(produit);
-		$window.location.href = '/accueil.html#/listProduits';
+		$state.go("listProduits");
 	}
 	
-	$scopre.validationCategorie = function(categorie){
-		$scope.message="$scope.categorie.nom";
+	$scope.validationCategorie = function(categorie){
+	
 		
 		CategorieService.save(categorie);
-		$window.location.href='/accueil.html#/formProduit';
+		
+		
+
+		
+		
+		$state.reload();
+		
 	}
 
 };

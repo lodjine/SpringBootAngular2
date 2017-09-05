@@ -33,8 +33,8 @@
 					ng-model="produit.intitule" placeholder="Nom" type="text" /> <br />
 
 				<label> Catégorie </label><br /> <select
-					ng-model="produit.categorie.idCategorie">
-					<option ng-repeat="x in categories" ng-value="x.idCategorie">{{x.nomCategorie}}
+					ng-model="produit.categorie.idCategorie" name="categories">
+					<option id="categories" ng-repeat="x in categories" ng-value="x.idCategorie">{{x.nomCategorie}}
 					</option>
 				</select>
 
@@ -73,7 +73,7 @@
       
       <label> Nom de la catégorie </label> <br />
        <input
-					ng-model="categorie.nom" placeholder="Nom" type="text" /> <br /><br /><br />
+					ng-model="categorie.nomCategorie" placeholder="Nom" type="text" /> <br /><br /><br />
        <input class="btn btn-primary btn-block"
 				ng-click="validationCategorie(categorie)" type="submit" data-dismiss="modal"></input>
       </form>
