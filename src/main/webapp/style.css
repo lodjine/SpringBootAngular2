@@ -1,4 +1,12 @@
 .btn {
-	width : 100px;
+	width: 100px !important;
 	margin: auto;
-}	
+}
+
+.cadreForm {
+	border: solid 1px;
+	padding: 20px;
+	width: 450px;
+	text-align: center;
+	margin: auto;
+}

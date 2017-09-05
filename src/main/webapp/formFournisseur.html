@@ -5,9 +5,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form>
+	<form>
+		<div style="text-align: center; margin: 0 auto;">
 
-		
 
 			<h2>Formulaire d'ajout d'un nouveau fournisseur</h2>
 
@@ -15,31 +15,23 @@
 				<i> Renseignez ici les informations du nouveau fournisseur </i>
 			</p>
 
-			<div style="border: solid 1px; padding: 20px;">
+			<div class="cadreForm" >
 
- <br /> <label>
-					Nom  </label> <br /> <input ng-model="fournisseur.nomFournisseur"
-					placeholder="Nom" type="text" /> <br /> 
-					
-					 <br /> <label>
-					Adresse </label> <br /> <input ng-model="fournisseur.adresse"
-					placeholder="adresse" type="text" /> <br /> 
-					
-					 <br /> <label>
-					 Email </label> <br /> <input ng-model="fournisseur.email"
-					placeholder="vvvvv@xxx.yy" type="email" /> <br /> 
-					
-					 <br /> <label>
-					Numero de Telephone </label> <br /> <input ng-model="fournisseur.telephone"
-					placeholder="telephone" type="text" /> <br /> 
-					
-					
-					<br /> <br /> <input class="btn btn-primary btn-block"
-				ng-click="validationFct(fournisseur)" type="submit"></input> <br /> <br />
-			<button ng-click="annulerFct()">Annuler</button>
-					
+				<br /> <label> Nom </label> <br /> <input
+					ng-model="fournisseur.nomFournisseur" placeholder="Nom" type="text" />
+				<br /> <br /> <label> Adresse </label> <br /> <input
+					ng-model="fournisseur.adresse" placeholder="adresse" type="text" />
+				<br /> <br /> <label> Email </label> <br /> <input
+					ng-model="fournisseur.email" placeholder="vvvvv@xxx.yy"
+					type="email" /> <br /> <br /> <label> Numero de
+					Telephone </label> <br /> <input ng-model="fournisseur.telephone"
+					placeholder="telephone" type="text" /> <br /> <br /> <br /> <input
+					ng-click="validationFct(fournisseur)"
+					class="btn btn-primary btn-block" type="submit"></input> <br /> 
+				<button class="btn btn-primary btn-block" ng-click="annulerFct()">Annuler</button>
 
-</div>
-</form>
+			</div>
+		</div>
+	</form>
 </body>
 </html>

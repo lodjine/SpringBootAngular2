@@ -4,7 +4,7 @@
 		<div class="card-header">
 			<i class="fa fa-table"></i> Liste des Produits
 		</div>
-		<button type="submit" ui-sref="formProduit" >Ajouter Produit</button>
+		<button class="btn btn-primary btn-block" type="submit" ui-sref="formProduit" >Ajouter</button>
 		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-bordered" width="100%" id="dataTable"
@@ -27,8 +27,8 @@
 							<td>{{produit.frais}}</td>
 							<td>{{produit.perissable}}</td>
 							<td>{{produit.categorie.nomCategorie}}</td>
-							<td><button type="submit" ui-sref="detailProduit({id:produit.idProduit})">Modifier</button></td>
-							<td><button type="submit" ng-click="deleteProduit(produit.idProduit)">Supprimer</button></td>							
+							<td><button class="btn btn-primary btn-block" type="submit" ui-sref="detailProduit({id:produit.idProduit})">Modifier</button></td>
+							<td><button class="btn btn-primary btn-block" type="submit" ng-click="deleteProduit(produit.idProduit)">Supprimer</button></td>							
 						</tr>
 					</tbody>
 				</table>
