@@ -45,5 +45,9 @@ public class QuantiteWS {
 		return true;
 	}
 	
+	@RequestMapping(value="/quantitesByLocalite/{id}", method = RequestMethod.GET)
+	public List<Quantite> getQuantitesByLocalite(@PathVariable Long id) {
+		return quantiteDao.quantiteByLocalite(id);
+	}
 
 }

@@ -5,9 +5,43 @@
 <form>
 	<div>
 		<label>Choisir un magasin</label><br /> <select
-			ng-model="localite.idLocalite">
+			ng-model="localite.idLocalite" ng-change="selectLocalite()">
 			<option ng-repeat="localite in localites"
 				ng-value="localite.idLocalite">{{localite.nom}}</option>
 		</select>
+	</div>
+	
+	<div class="card mb-3">
+		<div class="card-header">
+			<i class="fa fa-table" ></i> Liste des Produits de {{localite.nom}}
+		</div>		
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" width="100%" id="dataTable"
+					cellspacing="0">
+					<thead>
+						<tr>							
+							<th>Intitulé</th>
+							<th>Frais ?</th>
+							<th>Périssable ?</th>
+							<th>Catégorie</th>
+							<th>Quantité</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="quantite in produits">
+							<td>{{quantite.produit.idProduit}}</td>
+							<td>{{quantite.produit.intitule}}</td>
+							<td>{{quantite.produit.frais}}</td>
+							<td>{{quantite.produit.perissable}}</td>
+							<td>{{quantite.produit.categorie.nomCategorie}}</td>
+							<td>{{quantite.quantite}}</td>							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="card-footer small text-muted"></div>
 	</div>
 </form>
