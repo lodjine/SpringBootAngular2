@@ -17,77 +17,77 @@
 				<i> Renseignez ici les informations du nouveau produit </i>
 			</p>
 
-			<div style="border: solid 1px; padding: 20px;">
-
-				<label> Produit frais</label> <label> <input
+			<div class="cadreForm">
+				<label> Nom du produit </label> <br /> <input
+					ng-model="produit.intitule" placeholder="Nom" type="text" /> <br /><br />
+				<label> Produit frais : </label> <label> <input
 					ng-model="produit.frais" type="radio" value="true" name="frais" />
 					oui
 				</label> <label> <input ng-model="produit.frais" type="radio"
 					value="false" name="frais" /> non
-				</label> <br /> <label> Produit périssable</label> <label> <input
+				</label> <br /> <label> Produit périssable : </label> <label> <input
 					ng-model="produit.perissable" type="radio" value="true"
 					name="perissable" /> oui
 				</label> <label> <input ng-model="produit.perissable" type="radio"
 					value="false" name="perissable" /> non
-				</label> <br /> <label> Nom du produit </label> <br /> <input
-					ng-model="produit.intitule" placeholder="Nom" type="text" /> <br />
-
-				<label> Catégorie </label><br /> <select
-					ng-model="produit.categorie.idCategorie" name="categories">
-					<option id="categories" ng-repeat="x in categories" ng-value="x.idCategorie">{{x.nomCategorie}}
+				</label> <br /> <br /> <label> Catégorie </label><br /> <select
+					ng-model="produit.categorie.idCategorie" name="categories" >
+					<option value="" disabled selected>Choisir la catégorie</option>
+					<option style="width: 180px" id="categories" 
+						ng-repeat="x in categories" ng-value="x.idCategorie">{{x.nomCategorie}}
 					</option>
-				</select>
+				</select> <br /> <br />
+				<button style="width: 200px !important" type="button"
+					class="btn btn-primary btn-block" data-toggle="modal"
+					data-target="#myModal">Nouvelle catégorie</button>
 
-<br/><br/>
-		<button type="button"  class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Ajouter nouvelle catégorie</button>
-		
+				<br /> <input class="btn btn-primary btn-block"
+					ng-click="validationFct(produit)" type="submit"></input> <br />
+				<button class="btn btn-primary btn-block" ng-click="annulerFct()">Annuler</button>
 
 
-			
 			</div>
-			<br /> <br /> <input class="btn btn-primary btn-block"
-				ng-click="validationFct(produit)" type="submit"></input> <br /> <br />
-			<button ng-click="annulerFct()">Annuler</button>
+
 
 
 
 		</div>
 	</form>
-	
 
 
 
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Ajout d'une nouvelle catégorie</h4>
-      </div>
-      <div class="modal-body">
-      
-      
-      <form>
-      
-      <label> Nom de la catégorie </label> <br />
-       <input
-					ng-model="categorie.nomCategorie" placeholder="Nom" type="text" /> <br /><br /><br />
-       <input class="btn btn-primary btn-block"
-				ng-click="validationCategorie(categorie)" type="submit" data-dismiss="modal"></input>
-      </form>
-      
-      
-      
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
 
-  </div>
-</div>
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+<!-- 					<button type="button" class="close" data-dismiss="modal">&times;</button> -->
+					<h4 class="modal-title">Ajout d'une nouvelle catégorie</h4>
+				</div>
+				<div class="modal-body">
+
+
+					<form>
+
+						<label> Nom de la catégorie </label> <br /> <input
+							ng-model="categorie.nomCategorie" placeholder="Nom" type="text" />
+						<br /> <br /> <br /> <input class="btn btn-primary btn-block"
+							ng-click="validationCategorie(categorie)" type="submit"
+							data-dismiss="modal"></input>
+					</form>
+
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 
 
