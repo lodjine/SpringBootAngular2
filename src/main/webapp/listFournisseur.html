@@ -6,39 +6,41 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form>
+	<div>
 
-<div> 
+		<table class="table table-bordered" width="100%" id="dataTable"
+			cellspacing="0">
+			<thead>
+				<tr>
+					<th>ID Fournisseur</th>
+					<th>Nom</th>
+					<th>Adresse</th>
+					<th>Telephone</th>
+					<th>Email</th>
+					<th>Modifier</th>
+					<th>Supprimer</th>
+				</tr>
+			</thead>
 
-<table class="table table-bordered" width="100%" id="dataTable"
-					cellspacing="0">
-					<thead>
-						<tr>
-							<th>ID Fournisseur</th>
-							<th>Nom</th>
-							<th>Adresse</th>
-							<th>Telephone</th>
-							<th>Email</th>
-							<th>Modifier</th>
-							<th>Supprimer</th>
-						</tr>
-					</thead>
-					
-					<tbody>
-						<tr ng-repeat="x in fournisseurs">
+			<tbody>
+				<tr ng-repeat="x in fournisseurs">
 
- <td>{{ x.idFournisseur}}</td>
-  <td>{{ x.nomFournisseur }}</td>
-    <td>{{ x.adresse}}</td>
-    <td>{{ x.telephone}}</td>
-    <td>{{ x.email}}</td>
-    <td><button type="submit" ui-sref="detailFournisseur({id:fournisseur.idFournisseur})">Modifier</button></td>
-							<td><button type="submit" ng-click="deleteFournisseur(fournisseur.idFournisseur)">Supprimer</button></td>
- </tbody>
-    
+					<td>{{ x.idFournisseur}}</td>
+					<td>{{ x.nomFournisseur }}</td>
+					<td>{{ x.adresse}}</td>
+					<td>{{ x.telephone}}</td>
+					<td>{{ x.email}}</td>
+					<td><button type="submit"
+							ui-sref="formFournisseur({id:x.idFournisseur})">Modifier</button></td>
+					<td><button type="submit"
+							ng-click="deleteFournisseur(x.idFournisseur)">Supprimer</button></td>
+			</tbody>
 
-</table>
 
-</div>
+		</table>
 
+	</div>
+</form>
 </body>
 </html>

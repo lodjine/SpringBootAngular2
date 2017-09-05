@@ -6,7 +6,8 @@ listFournisseurCtrl.$inject = ['$scope','FournisseurService'];
 	
 		$scope.fournisseurs=FournisseurService.query();
 		
-		$scope.deleteFournisseur=function deleteFournisseur(id){
-			FournisseurService.delete({id:id});
+		$scope.deleteFournisseur=function deleteFournisseur(idF){
+			
+			FournisseurService.delete({id:idF});
 		}
 	};
