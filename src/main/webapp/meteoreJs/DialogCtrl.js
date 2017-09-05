@@ -1,4 +1,8 @@
-angular.module('meteoreApp', [ 'ui.bootstrap' ]);
+angular.module('meteoreApp', [ 'ui.bootstrap' ]).controller('DialogCtrl',DialogCtrl);
+
+
+
+
 
 function ListCtrl($scope, $dialog) {
 	
