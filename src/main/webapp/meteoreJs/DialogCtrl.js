@@ -4,7 +4,6 @@ angular.module('meteoreApp', ['ngMaterial'])
   $scope.status = '  ';
   $scope.customFullscreen = false;
 
-
   $scope.showPrompt = function(ev) {
     var confirm = $mdDialog.prompt()
       .title('Nouvelle Commande')
