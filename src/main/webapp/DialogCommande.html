@@ -1,8 +1,8 @@
 
 
 <div>
-	<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">
-		Nouvel quantité</button>
+	<button class="btn btn-primary btn-block" data-toggle="modal"
+		data-target="#myModal" ng-click="edit()">Nouvel quantité</button>
 </div>
 
 
@@ -18,12 +18,39 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="quantite in quantities">
-				<td>{{quantite.nom}}</td>
+				<td>{{quantite.produit.intitule}}</td>
 				<td>{{quantite.quantite}}</td>
 				<td><button class="btn btn-small" ng-click="edit(quantite)">Edit</button></td>
 			</tr>
 		</tbody>
 	</table>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- 					<button type="button" class="close" data-dismiss="modal">&times;</button> -->
+				<h4 class="modal-title"> Ajout d'une nouvelle quantité </h4>
+			</div>
+			<div class="modal-body">
+				<p>Valeur</p>
+				<input id="newQuantity" ng-model="quantite.quantite" type="text" />
+			</div>
+			<input name="Valider" class="btn btn-primary btn-block"
+				ng-click="validationQuantite(quantite)" type="submit"
+				data-dismiss="modal"></input>
+
+
+			<div class="modal-footer">
+				<button type="button" ng-click="close()" class="btn"
+					data-dismiss="modal">close</button>
+			</div>
+		</div>
+
+	</div>
 </div>
 
 
