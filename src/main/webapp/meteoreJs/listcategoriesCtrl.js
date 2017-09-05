@@ -7,6 +7,10 @@ listcategoriesCtrl.$inject = ['$scope','CategorieService'];
 	
 		$scope.categories=CategorieService.query();
 		
+$scope.deleteCategorie=function deleteCategorie(idC){
+	CategorieService.delete({id:idC});
+		}
+		
 	};
  
 		

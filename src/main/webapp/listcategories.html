@@ -1,29 +1,41 @@
 
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
 
-<div> 
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<div>
 
-<table class="table table-bordered" width="100%" id="dataTable"
-					cellspacing="0">
-					<thead>
-						<tr>
-							<th>ID Categorie</th>
-							<th>Nom Categorie</th>
-							
-						</tr>
-					</thead>
-					
-					<tbody>
-						<tr ng-repeat="x in categories">
+			<table class="table table-bordered" width="100%" id="dataTable"
+				cellspacing="0">
+				<thead>
+					<tr>
+						<th>ID Categorie</th>
+						<th>Nom Categorie</th>
+						<th>Supprimer</th>
+					</tr>
+				</thead>
 
-  <td>{{ x.idCategorie }}</td>
-    <td>{{ x.nomCategorie }}</td>
- </tbody>
-    
+				<tbody>
+					<tr ng-repeat="x in categories">
 
-</table>
+						<td>{{ x.idCategorie }}</td>
+						<td>{{ x.nomCategorie }}</td>
+					<td><button type="submit"
+							ng-click="deleteCategorie(x.idCategorie)">Supprimer</button></td>
+				</tbody>
 
-</div>
 
+			</table>
+
+		</div>
+	</form>
+</body>
+</html>
 
 
