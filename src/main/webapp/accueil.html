@@ -14,7 +14,7 @@
 <script src="/meteoreJs/listMagasinsService.js"></script>
 <script src="/meteoreJs/ProduitsService.js"></script>
 <script src="/meteoreJs/fournisseurService.js"></script>
-
+<script src="/meteoreJs/quantiteService.js"></script>
 <script src="/meteoreJs/listcategoriesCtrl.js"></script>
 <script src="/meteoreJs/formMagasinCtrl.js"></script>
 <script src="/meteoreJs/listMagasinsCtrl.js"></script>
@@ -151,34 +151,34 @@
 						<span class="nav-link-text"> Gestion Stock Batiment</span>
 				</a></li>
 
-				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Components"><a
-					class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
-					href="#collapseComponents" data-parent="#exampleAccordion"> <i
-						class="fa fa-fw fa-wrench"></i> <span class="nav-link-text">
-							Components</span>
-				</a>
-					<ul class="sidenav-second-level collapse" id="collapseComponents">
-						<li><a href="static-nav.html">Static Navigation</a></li>
-						<li><a href="#">Custom Card Examples</a></li>
-					</ul></li>
-				<li class="nav-item" data-toggle="tooltip" data-placement="right"
-					title="Menu Levels"><a
-					class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
-					href="#collapseMulti" data-parent="#exampleAccordion"> <i
-						class="fa fa-fw fa-sitemap"></i> <span class="nav-link-text">
-							Menu Levels</span>
-				</a>
-					<ul class="sidenav-second-level collapse" id="collapseMulti">
-						<li><a href="#">Second Level Item</a></li>
-						<li><a href="#">Second Level Item</a></li>
-						<li><a class="nav-link-collapse collapsed"
-							data-toggle="collapse" href="#collapseMulti2">Third Level</a>
-							<ul class="sidenav-third-level collapse" id="collapseMulti2">
-								<li><a href="#">Third Level Item</a></li>
-								<li><a href="#">Third Level Item</a></li>
-							</ul></li>
-					</ul></li>
+<!-- 				<li class="nav-item" data-toggle="tooltip" data-placement="right" -->
+<!-- 					title="Components"><a -->
+<!-- 					class="nav-link nav-link-collapse collapsed" data-toggle="collapse" -->
+<!-- 					href="#collapseComponents" data-parent="#exampleAccordion"> <i -->
+<!-- 						class="fa fa-fw fa-wrench"></i> <span class="nav-link-text"> -->
+<!-- 							Components</span> -->
+<!-- 				</a> -->
+<!-- 					<ul class="sidenav-second-level collapse" id="collapseComponents"> -->
+<!-- 						<li><a href="static-nav.html">Static Navigation</a></li> -->
+<!-- 						<li><a href="#">Custom Card Examples</a></li> -->
+<!-- 					</ul></li> -->
+<!-- 				<li class="nav-item" data-toggle="tooltip" data-placement="right" -->
+<!-- 					title="Menu Levels"><a -->
+<!-- 					class="nav-link nav-link-collapse collapsed" data-toggle="collapse" -->
+<!-- 					href="#collapseMulti" data-parent="#exampleAccordion"> <i -->
+<!-- 						class="fa fa-fw fa-sitemap"></i> <span class="nav-link-text"> -->
+<!-- 							Menu Levels</span> -->
+<!-- 				</a> -->
+<!-- 					<ul class="sidenav-second-level collapse" id="collapseMulti"> -->
+<!-- 						<li><a href="#">Second Level Item</a></li> -->
+<!-- 						<li><a href="#">Second Level Item</a></li> -->
+<!-- 						<li><a class="nav-link-collapse collapsed" -->
+<!-- 							data-toggle="collapse" href="#collapseMulti2">Third Level</a> -->
+<!-- 							<ul class="sidenav-third-level collapse" id="collapseMulti2"> -->
+<!-- 								<li><a href="#">Third Level Item</a></li> -->
+<!-- 								<li><a href="#">Third Level Item</a></li> -->
+<!-- 							</ul></li> -->
+<!-- 					</ul></li> -->
 			</ul>
 			<ul class="navbar-nav sidenav-toggler">
 				<li class="nav-item"><a class="nav-link text-center"
@@ -288,12 +288,12 @@
 
 	<div class="content-wrapper">
 
-		<div class="container-fluid">
+		<div class="container -fluid">
 
 			<!-- Breadcrumbs -->
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-				<li class="breadcrumb-item active">My Dashboard</li>
+				<li class="breadcrumb-item"><a href="#">Accueil</a></li>
+<!-- 				<li class="breadcrumb-item active">My Dashboard</li> -->
 			</ol>
 
 			<div ui-view></div>
