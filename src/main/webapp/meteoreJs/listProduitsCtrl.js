@@ -12,4 +12,6 @@ listProduitsCtrl.$inject = ['$scope','ProduitsService'];
 			ProduitsService.delete({id:id});
 		}
 		
+		
+		
 	};
