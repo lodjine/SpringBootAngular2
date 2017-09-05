@@ -17,6 +17,13 @@ function formProduitCtrl($scope, ProduitsService, $window,CategorieService,$stat
 		ProduitsService.save(produit);
 		$window.location.href = '/accueil.html#/listProduits';
 	}
+	
+	$scopre.validationCategorie = function(categorie){
+		$scope.message="$scope.categorie.nom";
+		
+		CategorieService.save(categorie);
+		$window.location.href='/accueil.html#/formProduit';
+	}
 
 };
 
