@@ -6,33 +6,38 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form>
-		<div>
-
-			<table class="table table-bordered" width="100%" id="dataTable"
-				cellspacing="0">
-				<thead>
-					<tr>
-						<th>ID Categorie</th>
-						<th>Nom Categorie</th>
-						<th>Supprimer</th>
-					</tr>
-				</thead>
-
-				<tbody>
-					<tr ng-repeat="x in categories">
-
-						<td>{{ x.idCategorie }}</td>
-						<td>{{ x.nomCategorie }}</td>
-					<td><button class="btn btn-primary btn-block" type="submit"
-							ng-click="deleteCategorie(x.idCategorie)">Supprimer</button></td>
-				</tbody>
-
-
-			</table>
-
+	<div class="card mb-3">
+		<div class="card-header">
+			<i class="fa fa-table"></i> Liste des catégories
 		</div>
-	</form>
+		<div class="card-body">
+			<div class="table-responsive">
+
+				<table class="table table-bordered" width="100%" id="dataTable"
+					cellspacing="0">
+					<thead>
+						<tr>
+							<th>ID Categorie</th>
+							<th>Nom Categorie</th>
+							<th>Supprimer</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-repeat="x in categories">
+
+							<td>{{ x.idCategorie }}</td>
+							<td>{{ x.nomCategorie }}</td>
+							<td><button class="btn btn-primary btn-block" type="submit"
+									ng-click="deleteCategorie(x.idCategorie)">Supprimer</button></td>
+					</tbody>
+
+
+				</table>
+
+			</div>
+		</div>
+	</div>
 </body>
 </html>
 
