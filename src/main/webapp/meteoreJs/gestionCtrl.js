@@ -9,8 +9,9 @@ function gestionCtrl($scope, ProduitsService, $window, CategorieService,
 	$scope.localites = listMagasinsService.query();
 	
 	$scope.selectLocalite= function(){
-		var id = $scope.localite.idLocalite;		
-		$scope.produits = QuantiteService.getQuantiteByLocalite(id);
+		var id = $scope.localite.idLocalite;
+		$scope.localite=listMagasinsService.get({ id: id });		
+		$scope.produits = QuantiteService.getQuantiteByLocalite({id});
 	}
 	
 

@@ -25,21 +25,20 @@ public class Produit implements Serializable {
 	private String intitule;
 	private Boolean frais;
 	private Boolean perissable;
-	private List<Quantite> listQuantites;
 	private List<Fournisseur> listFournisseurs;
 	private Categorie categorie;
 
 	public Produit() {
 	}
 
-	public Produit(Long idProduit, String intitule, Boolean frais, Boolean perissable, List<Quantite> listQuantites,
+	public Produit(Long idProduit, String intitule, Boolean frais, Boolean perissable,
 			List<Fournisseur> listFournisseurs, Categorie categorie) {
 		super();
 		this.idProduit = idProduit;
 		this.intitule = intitule;
 		this.frais = frais;
 		this.perissable = perissable;
-		this.listQuantites = listQuantites;
+
 		this.listFournisseurs = listFournisseurs;
 		this.categorie = categorie;
 	}
@@ -82,15 +81,6 @@ public class Produit implements Serializable {
 		this.perissable = perissable;
 	}
 
-	@OneToMany(mappedBy = "produit")
-	public List<Quantite> getListQuantites() {
-		return listQuantites;
-	}
-
-	public void setListQuantites(List<Quantite> listQuantites) {
-		this.listQuantites = listQuantites;
-	}
-
 	@ManyToMany
 	public List<Fournisseur> getListFournisseurs() {
 		return listFournisseurs;
@@ -99,7 +89,7 @@ public class Produit implements Serializable {
 	public void setListFournisseurs(List<Fournisseur> listFournisseurs) {
 		this.listFournisseurs = listFournisseurs;
 	}
-	
+
 	@ManyToOne
 	public Categorie getCategorie() {
 		return categorie;
@@ -124,7 +114,6 @@ public class Produit implements Serializable {
 		result = prime * result + ((idProduit == null) ? 0 : idProduit.hashCode());
 		result = prime * result + ((intitule == null) ? 0 : intitule.hashCode());
 		result = prime * result + ((listFournisseurs == null) ? 0 : listFournisseurs.hashCode());
-		result = prime * result + ((listQuantites == null) ? 0 : listQuantites.hashCode());
 		result = prime * result + ((perissable == null) ? 0 : perissable.hashCode());
 		return result;
 	}
@@ -163,11 +152,6 @@ public class Produit implements Serializable {
 				return false;
 		} else if (!listFournisseurs.equals(other.listFournisseurs))
 			return false;
-		if (listQuantites == null) {
-			if (other.listQuantites != null)
-				return false;
-		} else if (!listQuantites.equals(other.listQuantites))
-			return false;
 		if (perissable == null) {
 			if (other.perissable != null)
 				return false;
@@ -175,7 +159,5 @@ public class Produit implements Serializable {
 			return false;
 		return true;
 	}
-
-
 
 }

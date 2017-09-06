@@ -61,7 +61,7 @@ public class Quantite implements Serializable{
 	}
 
 	@ManyToOne
-	@JoinColumn(name="produitId", referencedColumnName="id_produit", insertable = false, updatable = false)
+	@JoinColumn(name="id_produit", referencedColumnName="id_produit", insertable = false, updatable = false)
 	public Produit getProduit() {
 		return produit;
 	}
@@ -71,7 +71,7 @@ public class Quantite implements Serializable{
 	}
 
 	@ManyToOne
-	@JoinColumn(name="localiteId", referencedColumnName="idLocalite", insertable = false, updatable = false)
+	@JoinColumn(name="id_localite",referencedColumnName="id_localite", insertable = false, updatable = false)
 	public Localite getLocalite() {
 		return localite;
 	}
