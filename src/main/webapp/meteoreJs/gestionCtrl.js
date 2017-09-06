@@ -8,14 +8,22 @@ function gestionCtrl($scope, ProduitsService, $window, CategorieService,
 
 	$scope.localites = listMagasinsService.query();
 	
-	$scope.selectLocalite= function(){
+	$scope.selectLocalite= function(localite){
 		var id = $scope.localite.idLocalite;
 		$scope.localite=listMagasinsService.get({ id: id });		
 		$scope.produits = QuantiteService.getQuantiteByLocalite({id});
 	}
 	
-	$scope.creer = function(idQuantite){
-		$scope.quantite = QuantiteService.get({id:idQuantite});
+	$scope.modifier = function(quantite){
+		$scope.quantite = quantite;
+	}
+	
+	$scope.validationQuantite = function(quantite) {
+		var c = $scope.commande;
+		var q = $scope.quantite.quantite;
+		var f = c + q;
+		$scope.quantite.quantite = f;		
+		QuantiteService.save(quantite);
 	}
 };
 

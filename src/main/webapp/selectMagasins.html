@@ -39,7 +39,8 @@
 							<td>{{quantite.quantite}}</td>
 							<td>
 								<button class="btn btn-primary btn-block fa fa-plus"
-									data-toggle="modal" data-target="#myModal" ng-click="creer({id:quantite.idQuantite})"></button>
+									data-toggle="modal" data-target="#myModal"
+									ng-click="modifier(quantite)"></button>
 							</td>
 						</tr>
 					</tbody>
@@ -57,16 +58,17 @@
 					<h4 class="modal-title">Ajout d'une nouvelle quantité</h4>
 				</div>
 				<div class="modal-body">
-					<p ng-model="quantite.produit">Produit :
-						{{quantite.quantite}}</p>
+					<p ng-model="quantite">Commander : {{quantite.produit.intitule}}</p>
+					
 					<p>Valeur</p>
-					<input id="newQuantity" ng-model="quantite.quantite" type="text" />
+					<input id="newQuantity" ng-model="commande" type="number" />
 
 					<p>Date de Modification</p>
 					<input id="newQuantity" ng-model="quantite.dateModification"
-						type="date" pattern="dd/MM/yyyy" />
+						type="date" pattern="yyyy/MM/dd" />
 
 				</div>
+
 				<input name="Valider" class="btn btn-primary btn-block"
 					ng-click="validationQuantite(quantite)" type="submit"
 					data-dismiss="modal"></input>
