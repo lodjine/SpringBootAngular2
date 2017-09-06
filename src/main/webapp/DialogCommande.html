@@ -22,7 +22,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="quantite in quantities">
-					<td></td>
+					<td>{{quantite.produit.intitule}}</td>
 					<td>{{quantite.quantite}}</td>
 					<td>{{quantite.dateModification}}</td>
 					<td>
@@ -43,8 +43,29 @@
 				<h4 class="modal-title">Ajout d'une nouvelle quantité</h4>
 			</div>
 			<div class="modal-body">
+				<p>Produit</p>
+				<select ng-model="quantite.produit">
+					<option ng-repeat="produit in produits">
+						{{produit.intitule}}</option>
+				</select>
+
+				<p>Localite</p>
+				<select ng-model="quantite.localite">
+					<option ng-repeat="localite in localities">
+						{{localite.nom}}</option>
+				</select>
+
+
 				<p>Valeur</p>
 				<input id="newQuantity" ng-model="quantite.quantite" type="text" />
+
+				<p>Date de Modification</p>
+				<input id="newQuantity" ng-model="quantite.dateModification"
+					type="date" pattern="dd/MM/yyyy" />
+
+				<p></p>
+
+
 			</div>
 			<input name="Valider" class="btn btn-primary btn-block"
 				ng-click="validationQuantite(quantite)" type="submit"
