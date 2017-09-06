@@ -3,6 +3,8 @@
 </head>
 
 <form>
+
+
 	<div>
 		<label>Choisir un magasin</label><br /> <select
 			ng-model="localite.idLocalite" ng-change="selectLocalite()">
@@ -11,7 +13,16 @@
 		</select>
 	</div>
 
+
+	<div>
+		<button class="btn btn-primary btn-block" data-toggle="modal"
+			data-target="#myModal2" ng-model="localite"
+			ng-click="creer(localite)">Nouvel quantité</button>
+	</div>
+
+
 	<div class="card mb-3">
+
 		<div class="card-header">
 			<i class="fa fa-table" ng-model="localite"></i> Liste des Produits de
 			{{localite.nom}}
@@ -58,8 +69,9 @@
 					<h4 class="modal-title">Ajout d'une nouvelle quantité</h4>
 				</div>
 				<div class="modal-body">
-					<p ng-model="quantite">Commander : {{quantite.produit.intitule}}</p>
-					
+					<p ng-model="quantite">Commander :
+						{{quantite.produit.intitule}}</p>
+
 					<p>Valeur</p>
 					<input id="newQuantity" ng-model="commande" type="number" />
 
@@ -81,5 +93,48 @@
 
 		</div>
 	</div>
+
+
+	<div id="myModal2" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Ajout d'une nouvelle quantité</h4>
+				</div>
+				<div class="modal-body">
+					<p>Localite</p>
+					<p>Ajouter un produit dans {{localite.nom}} ?</p>
+
+
+					<p>Produit</p>
+					<select ng-model="quantite.produit">
+						<option ng-repeat="produit in produitss">
+							{{produit.intitule}}</option>
+					</select>
+
+
+
+					<p>Valeur</p>
+					<input id="newQuantity" ng-model="quantite.quantite" type="text" />
+
+					<p>Date de Modification</p>
+					<input id="newQuantity" ng-model="quantite.dateModification"
+						type="date" pattern="dd/MM/yyyy" />
+
+				</div>
+				<input name="Valider" class="btn btn-primary btn-block"
+					ng-click="create(quantite)" type="submit"
+					data-dismiss="modal"></input>
+
+				<div class="modal-footer">
+					<button type="button" ng-click="close()" class="btn"
+						data-dismiss="modal">close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
 </form>
 
