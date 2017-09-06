@@ -15,7 +15,7 @@
     		'getQuantiteByLocalite':{
     			method : 'GET',
     			isArray : true,
-    			url: '/quantitesByLocalite/:id'
+    			url: '/selectMagasins/:id'
     		}
     				
     	});

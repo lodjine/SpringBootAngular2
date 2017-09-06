@@ -11,7 +11,7 @@ import fr.adaming.springbootangular.model.Quantite;
 
 public interface IQuantiteDao extends JpaRepository<Quantite, Serializable>{
 	
-	@Query("Select q from Quantite q where q.localite like :id")
+	@Query("Select q from Quantite q where q.localite.idLocalite like :id")
 	public List<Quantite> quantiteByLocalite(@Param ("id") Long id);
 
 }

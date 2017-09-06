@@ -34,7 +34,7 @@ public class QuantiteWS {
 		return quantiteDao.findAll();
 	}
 	
-	@RequestMapping(value="/quantites/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/quantites/{id1}", method = RequestMethod.GET)
 	public Quantite getQuantiteById(@PathVariable Long id){
 		return quantiteDao.findOne(id);
 	}
@@ -45,7 +45,7 @@ public class QuantiteWS {
 		return true;
 	}
 	
-	@RequestMapping(value="/quantitesByLocalite/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/selectMagasins/{id}", method = RequestMethod.GET)
 	public List<Quantite> getQuantitesByLocalite(@PathVariable Long id) {
 		return quantiteDao.quantiteByLocalite(id);
 	}
