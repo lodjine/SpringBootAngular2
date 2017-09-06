@@ -14,7 +14,8 @@ function gestionCtrl($scope, ProduitsService, $window, CategorieService,
 		$scope.produits = QuantiteService.getQuantiteByLocalite({id});
 	}
 	
-
-
+	$scope.creer = function(idQuantite){
+		$scope.quantite = QuantiteService.get({id:idQuantite});
+	}
 };
 

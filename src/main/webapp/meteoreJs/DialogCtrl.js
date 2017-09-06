@@ -6,8 +6,6 @@ DialogCtrl.$inject = [ '$scope', 'FournisseurService', '$window', '$state',
 function DialogCtrl($scope, FournisseurService, $window, $state, $stateParams,
 		$dialog, QuantiteService, listMagasinsService) {
 
-	$scope.quantities = QuantiteService.query();
-
 	$scope.edit(quantite) = function(quantite) {
 		$dialog.open();
 	}
@@ -15,7 +13,5 @@ function DialogCtrl($scope, FournisseurService, $window, $state, $stateParams,
 	$scope.validationQuantite(quantite) = function(quantite) {
 		QuantiteService.save(quantite);
 	}
-
-	$scope.localities = listMagasinsService.query();
 
 };

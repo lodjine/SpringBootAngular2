@@ -10,33 +10,37 @@
 				ng-value="localite.idLocalite">{{localite.nom}}</option>
 		</select>
 	</div>
-	
+
 	<div class="card mb-3">
 		<div class="card-header">
-			<i class="fa fa-table" ng-model="localite"></i> Liste des Produits de {{localite.nom}}
-		</div>		
+			<i class="fa fa-table" ng-model="localite"></i> Liste des Produits de
+			{{localite.nom}}
+		</div>
 		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-bordered" width="100%" id="dataTable"
 					cellspacing="0">
 					<thead>
-						<tr>							
-							<th>Intitulé</th>
+						<tr>
+							<th>Intitulé Produit</th>
 							<th>Frais ?</th>
 							<th>Périssable ?</th>
 							<th>Catégorie</th>
 							<th>Quantité</th>
-							<th></th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="quantite in produits">							
+						<tr ng-repeat="quantite in produits">
 							<td>{{quantite.produit.intitule}}</td>
 							<td>{{quantite.produit.frais}}</td>
 							<td>{{quantite.produit.perissable}}</td>
 							<td>{{quantite.produit.categorie.nomCategorie}}</td>
 							<td>{{quantite.quantite}}</td>
-							<td></td>							
+							<td>
+								<button class="btn btn-primary btn-block fa fa-plus"
+									data-toggle="modal" data-target="#myModal" ng-click="creer({id:quantite.idQuantite})"></button>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -44,4 +48,36 @@
 		</div>
 		<div class="card-footer small text-muted"></div>
 	</div>
+
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Ajout d'une nouvelle quantité</h4>
+				</div>
+				<div class="modal-body">
+					<p ng-model="quantite.produit">Produit :
+						{{quantite.quantite}}</p>
+					<p>Valeur</p>
+					<input id="newQuantity" ng-model="quantite.quantite" type="text" />
+
+					<p>Date de Modification</p>
+					<input id="newQuantity" ng-model="quantite.dateModification"
+						type="date" pattern="dd/MM/yyyy" />
+
+				</div>
+				<input name="Valider" class="btn btn-primary btn-block"
+					ng-click="validationQuantite(quantite)" type="submit"
+					data-dismiss="modal"></input>
+
+				<div class="modal-footer">
+					<button type="button" ng-click="close()" class="btn"
+						data-dismiss="modal">close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </form>
+
