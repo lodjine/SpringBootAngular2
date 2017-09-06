@@ -11,6 +11,13 @@ $scope.deleteCategorie=function deleteCategorie(idC){
 	CategorieService.delete({id:idC});
 	$state.reload();
 		}
+
+$scope.validationCategorie = function(categorie) {
+	CategorieService.save(categorie);
+	$state.reload();
+
+}
+
 		
 	};
  

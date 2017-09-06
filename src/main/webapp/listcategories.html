@@ -20,6 +20,7 @@
 							<th>ID Categorie</th>
 							<th>Nom Categorie</th>
 							<th>Supprimer</th>
+
 						</tr>
 					</thead>
 
@@ -30,14 +31,68 @@
 							<td>{{ x.nomCategorie }}</td>
 							<td><button class="btn btn-primary btn-block" type="submit"
 									ng-click="deleteCategorie(x.idCategorie)">Supprimer</button></td>
+							</br>
+							</br>
 					</tbody>
 
 
 				</table>
+				<button style="width: 200px !important" type="button"
+					class="btn btn-primary btn-block" data-toggle="modal"
+					data-target="#myModal">Nouvelle catégorie</button>
 
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<!-- 					<button type="button" class="close" data-dismiss="modal">&times;</button> -->
+								<h4 class="modal-title">Ajout d'une nouvelle catégorie</h4>
+							</div>
+							<div class="modal-body">
+
+
+								<form>
+
+									<label> Nom de la catégorie </label> <br /> <input
+										ng-model="categorie.nomCategorie" placeholder="Nom"
+										type="text" /> <br /> <br /> <br /> <input
+										class="btn btn-primary btn-block"
+										ng-click="validationCategorie(categorie)" type="submit"
+										data-dismiss="modal"></input>
+								</form>
+
+
+
+
+
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
 </body>
 </html>
 
