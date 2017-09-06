@@ -70,6 +70,15 @@ meteoreApp.config(function($stateProvider, $urlRouterProvider) {
 	 
 	 
 	        
+}).state('pageUne', {
+	url : '/pageUne',
+	templateUrl : 'pageUne.html'
+	 
+	 
+	        
 });	 
+	 
+	 
+	 
 });
 

@@ -11,6 +11,12 @@ loginApp.config(function($stateProvider, $urlRouterProvider) {
         }).state('accueil', {
             url: '/accueil',
             templateUrl: 'accueil.html',
+        }).state('pageUne', {
+        	url : '/acceuil',
+        	templateUrl : 'pageUne.html'
+        	 
+        	 
+        	        
         });
 
 });
